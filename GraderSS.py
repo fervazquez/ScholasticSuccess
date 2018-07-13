@@ -244,8 +244,8 @@ def runGrade():
     writingScore=scorehold[2][writing]
 
     print('Combined Math Score: {}'.format(mathScore))
-    print('Reading Score: {}'.format(readingScore))
-    print('Writing and Language Score: {}'.format(writingScore))
+    print('Reading Score: {}'.format(int(readingScore)*10))
+    print('Writing and Language Score: {}'.format(int(writingScore)*10))
 
     
 
