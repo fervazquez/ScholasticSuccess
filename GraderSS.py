@@ -169,7 +169,7 @@ class TestHold(object):
 
 
 def runGrade():
-    start=time.time()
+    #start=time.time()
     fileobj=open("ggtest.txt", "r")
     tname=fileobj.readline().strip()
     tL=fileobj.readline().strip()
@@ -186,7 +186,7 @@ def runGrade():
         tests[x].getkeys(fileobj)
 
 
-    fileobj2=open("studentRes.txt", "r")
+    fileobj2=open("studentRESTEST.txt", "r")
     fName=fileobj2.readline().strip()
     lName=fileobj2.readline().strip()
     sec1=fileobj2.readline().strip()
@@ -198,8 +198,8 @@ def runGrade():
     MNCres=readres(fileobj2,sec3)
     MCalcres=readres(fileobj2,sec4)
 
-
-    
+    print(redres)
+    """
     tests[0].setanswers(redres)
     tests[1].setanswers(writeres)
     tests[2].setanswers(MNCres)
@@ -230,8 +230,8 @@ def runGrade():
     print(tests[3].cAns)
 
     print(tname)
-    end=time.time()
-    print(end-start)
+    #end=time.time()
+    #print(end-start)
     scorehold=getScoreCon(fileobj,scoreNum)
     print(scorehold)
     #3+2 then 0 then 1
@@ -250,6 +250,8 @@ def runGrade():
     
 
     print('Total Score: {}'.format(((int(mathScore))+(int(readingScore)*10)+(int(writingScore)*10))))
+
+    """
 
     
 
