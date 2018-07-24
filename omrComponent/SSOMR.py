@@ -146,17 +146,17 @@ def frCalc(data):
 			del FRRep[3-x]
 	#print(FRRep)
 	if len(FRRep) == 0:
-		return "NO INPUT"
+		return "INV"
 	if counter > 1:
-		return "INVALID INPUT"
+		return "INV"
 	if FRRep[0] == '/':
-		return "INVALID INPUT"
+		return "INV"
 	if len(FRRep)==2 and FRRep[1] == '/':
-		return "INVALID INPUT"
+		return "INV"
 	if len(FRRep)==3 and FRRep[2] == '/':
-		return "INVALID INPUT"
+		return "INV"
 	if len(FRRep)==4 and FRRep[3] == '/':
-		return "INVALID INPUT"
+		return "INV"
 	if len(FRRep)==3 and FRRep[1] == '/':
 		return FRRep[0] / FRRep[2]
 	if len(FRRep)==4 and FRRep[1] == '/':
@@ -171,7 +171,7 @@ def frCalc(data):
 		for x in range(0,len(FRRep)):
 			ans+=str(FRRep[x])
 		return int(ans)
-	return "NO INPUT"
+	return "INV"
 
 def calcAns(x,y,t,pic,count2,w,z):
 	mlist=[]
@@ -774,7 +774,7 @@ def SS_PSAT32(paper,num):
 				output.append([t,2])
 			if mlist[3]>gFac:
 				output.append([t,3])
-			#print("{} {} {} {} {} {} {} {} {}".format(x,t,mlist[0],mlist[1],mlist[2],mlist[3],output,mnum,len(output)))
+			print("{} {} {} {} {} {} {} {} {}".format(x,t,mlist[0],mlist[1],mlist[2],mlist[3],output,mnum,len(output)))
 			count=0
 			mlist=[]
 		t=['-','-','-']
@@ -824,18 +824,18 @@ def SS_PSAT42(paper,num):
 		thresh = cv2.threshold(warped, 0, 255,cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
 		#cv2.imshow("testI ",thresh)
 		(h,w)=thresh.shape[:2]
-		thresh2 = thresh[int(h*.1):h-int(h*.05),0:w-int(w*.1)]
+		thresh2 = thresh[int(h*.09):h-int(h*.04),0:w-int(w*.1)]
 		#cv2.imshow("testII {}".format(x),thresh2)
 
 		(h,w)=thresh2.shape[:2]
-		thresh3=thresh2[0:h-int(h*.945),int(w*.05):w-int(w*.79)]
+		thresh3=thresh2[int(h*.035):h-int(h*.915),int(w*.05):w-int(w*.79)]
 		val=cv2.countNonZero(thresh3)
 		hold="NG"
 		if val>gFac:
 			hold="G"
 		#print("{} {}".format(val,hold))
 		#cv2.imshow("testIII {}".format(x),thresh3)
-		thresh4 = thresh2[int(h*.15):h,int(w*.29):w]
+		thresh4 = thresh2[int(h*.17):h,int(w*.29):w]
 		#cv2.imshow("testIV {}".format(x),thresh4)
 		y=int(h*.073)
 		mlist=[]
@@ -843,7 +843,8 @@ def SS_PSAT42(paper,num):
 		count=0
 		for t in range(0,12):
 			q=thresh4[y*t:y*(t+1),0:w]
-			#cv2.imshow("{} t{}".format(x,t),q)
+			#if t==1 or t==0:
+			#	cv2.imshow("{} t{}".format(x,t),q)
 			(length,wid)=q.shape[:2]
 			amt=int(wid/4)
 			k0=q[0:length,0:amt]
@@ -1256,6 +1257,7 @@ def PSATmanage(fileobj,mark):
 	hold32=pg32PSAT(mark)
 	hold41=pg41PSAT(mark)
 	hold42=pg42PSAT(mark)
+	
 	fileobj.write("testF\ntestL\n")
 	t3=len(hold31)+len(hold32)
 	t4=len(hold41)+len(hold42)
@@ -1266,6 +1268,7 @@ def PSATmanage(fileobj,mark):
 	processOut(hold32,fileobj)
 	processOut(hold41,fileobj)
 	processOut(hold42,fileobj)
+	
 
 def SATmanage(fileobj,mark):
 	hold1=pg1SAT(mark)
@@ -1302,8 +1305,6 @@ def ACTmanage(fileobj,mark):
 	fileobj.write("************************\n")
 	processOut(hold4,fileobj)
 	fileobj.write("************************\n")
-	
-
 
 def getGuesses(answers):
 	y=[]
@@ -1316,12 +1317,13 @@ def getGuesses(answers):
 def processOut(outData,fileobj):
 	for x in range(0,len(outData)):
 		h2=outData[x]
-		#store='{} {} {}\n'.format(h2[0],h2[1],h2[2])
-		store='{}\n'.format(h2[1])
+		store='{} {} {}\n'.format(h2[0],h2[1],h2[2])
+		#store='{}\n'.format(h2[1])
 		fileobj.write(store)
+	fileobj.write("*******************************\n")
 
 
-#python SSOMR.py KATETEST.txt KATEF
+#python SSOMR.py KATETEST.txt KATEF testnum "ie: 1 or 2 or 3"
 fileobj=open(str(sys.argv[1]),"w")
 name=str(sys.argv[2])
 #hold=pg1SAT()
@@ -1337,10 +1339,12 @@ name=str(sys.argv[2])
 #pg3ACT()
 #pg4ACT()
 #name=name.strip()
-print(name)
-ACTmanage(fileobj,name)
-#SATmanage(fileobj,name)
-#PSATmanage(fileobj,name)
+if int(sys.argv[3])==1:
+	ACTmanage(fileobj,name)
+if int(sys.argv[3])==2:
+	SATmanage(fileobj,name)
+if int(sys.argv[3])==3:
+	PSATmanage(fileobj,name)
 """print(rRES)
 print(len(rRES))
 print("********************************************")
