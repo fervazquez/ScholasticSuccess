@@ -25,6 +25,9 @@ def picfix(image,num):
 	#cv2.imshow("st",image)
 	#cv2.waitKey(0)
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+	#cv2.imshow("check 0",gray)
+	#cv2.waitKey(0)
 	blurred = cv2.GaussianBlur(gray, (5, 5), 0)
 	edged = cv2.Canny(blurred, 75, 200)
 
@@ -57,15 +60,19 @@ def picfix(image,num):
 	# apply a four point perspective transform to both the
 	# original image and grayscale image to obtain a top-down
 	# birds eye view of the paper
+
+
+	
 	paper = four_point_transform(image, docCnt.reshape(4, 2))
 	warped = four_point_transform(gray, docCnt.reshape(4, 2))
-
+	
 	#cv2.imshow("st",warped)
 	#cv2.waitKey(0)
 
 	blurred = cv2.GaussianBlur(warped, (5, 5), 0)
 	edged = cv2.Canny(blurred, 75, 200)
-
+	#cv2.imshow("check post 1",warped)
+	#cv2.waitKey(0)
 	# find contours in the edge map, then initialize
 	# the contour that corresponds to the document
 	cnts = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL,
@@ -102,9 +109,13 @@ def picfix(image,num):
 	# apply a four point perspective transform to both the
 	# original image and grayscale image to obtain a top-down
 	# birds eye view of the paper
+
+	
 	areaStore=[]
 	if num == 1:
 		paper = four_point_transform(paper, docCnt.reshape(4, 2))
+		#cv2.imshow("check 2",paper)
+		#cv2.waitKey(0)
 		return paper
 	if num == 2:
 		areaStore.append(four_point_transform(paper, docstore[0].reshape(4, 2)))
@@ -197,8 +208,8 @@ def calcAns(x,y,t,pic,count2,w,z):
 	mlist.append(cv2.countNonZero(k4))
 	mlist.append(cv2.countNonZero(k0))
 	#cv2.imshow("{} t{}".format(x,t),k0)
-	#if count2 == 19:#or count2 == 39:
-	#	cv2.imshow("{} t{}".format(x,t),q)
+	#if count2 == 1 or count2 == 8 or count2 == 15 or count2 == 19:
+	#cv2.imshow("{} t{}".format(x,t),q)
 	#	cv2.imshow("{} t{} 0".format(x,t),k0)
 	#	cv2.imshow("{} t{} 1".format(x,t),k1)
 	#	cv2.imshow("{} t{} 2".format(x,t),k2)
@@ -209,25 +220,26 @@ def calcAns(x,y,t,pic,count2,w,z):
 		output2='G'
 	else:
 		output2='NG'
-	if mlist[0]>gFac:
+	
+	if mlist[0]==mnum:
 		if count2%2 == 0 and z == 1:
 			output='F'
 		else:
 			output='A'
 		count+=1
-	if mlist[1]>gFac:
+	if mlist[1]==mnum:
 		if count2%2 == 0 and z == 1:
 			output='G'
 		else:
 			output='B'
 		count+=1
-	if mlist[2]>gFac:
+	if mlist[2]==mnum:
 		if count2%2 == 0 and z == 1:
 			output='H'
 		else:
 			output='C'
 		count+=1
-	if mlist[3]>gFac:
+	if mlist[3]==mnum:
 		if count2%2 == 0 and z == 1:
 			output='J'
 		else:
@@ -270,7 +282,7 @@ def calcAnsACT(x,y,t,pic,count2,w):
 	mlist.append(cv2.countNonZero(k5))
 	mlist.append(cv2.countNonZero(k0))
 	#cv2.imshow("{} t{}".format(x,t),k0)
-	#if count2 < 10:#or count2 == 39:
+	#if count2 < 18 or count2 == 19:
 	#	cv2.imshow("{} t{}".format(x,t),q)
 	#	cv2.imshow("{} t{} 0".format(x,t),k0)
 	#	cv2.imshow("{} t{} 1".format(x,t),k1)
@@ -283,31 +295,32 @@ def calcAnsACT(x,y,t,pic,count2,w):
 		output2='G'
 	else:
 		output2='NG'
-	if mlist[0]>gFac:
+
+	if mlist[0]==mnum:
 		if count2%2 == 0:
 			output='F'
 		else:
 			output='A'
 		count+=1
-	if mlist[1]>gFac:
+	if mlist[1]==mnum:
 		if count2%2 == 0:
 			output='G'
 		else:
 			output='B'
 		count+=1
-	if mlist[2]>gFac:
+	if mlist[2]==mnum:
 		if count2%2 == 0:
 			output='H'
 		else:
 			output='C'
 		count+=1
-	if mlist[3]>gFac:
+	if mlist[3]==mnum:
 		if count2%2 == 0:
 			output='J'
 		else:
 			output='D'
 		count+=1
-	if mlist[4]>gFac:
+	if mlist[4]==mnum:
 		if count2%2 == 0:
 			output='K'
 		else:
@@ -338,7 +351,7 @@ def SS_SAT1(paper):
 
 		thresh2 = thresh[int(h*.01):h-int(h*.03),int(w*.1):w-int(w*.1)]
 		#cv2.imshow("testII {}".format(x),thresh2)
-
+		#cv2.waitKey(0)
 		(h,w)=thresh2.shape[:2]
 		y=int(h*.078)
 		mlist=[]
@@ -891,10 +904,11 @@ def SS_ACT1(paper):
 		#cv2.imshow("testI",thresh)
 
 		(h,w)=thresh.shape[:2]
-		thresh2 = thresh[int(h*0.016):h-int(h*.04),int(w*.05):w-int(w*.18)]
+		thresh2 = thresh[int(h*0.03):h-int(h*.02),int(w*.1):w-int(w*.11)]
 		#cv2.imshow("testII {}".format(x),thresh2)
+		#cv2.waitKey(0)
 		(h,w)=thresh2.shape[:2]
-		y=int(h*.053)
+		y=int(h*.0527)
 		mlist=[]
 		output=""
 		count=0
@@ -903,6 +917,7 @@ def SS_ACT1(paper):
 			count2+=1
 			if count2<76:
 				joke.append(calcAns(x,y,t,thresh2,count2,w,1))
+		cv2.waitKey(0)
 	print("*************************************")
 	return joke
 
@@ -943,10 +958,10 @@ def SS_ACT3(paper):
 		thresh = cv2.threshold(warped, 0, 255,cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
 		#cv2.imshow("testI",thresh)
 		(h,w)=thresh.shape[:2]
-		thresh2 = thresh[int(h*.0165):h-int(h*.03),int(w*.05):w-int(w*.15)]
+		thresh2 = thresh[int(h*.016):h-int(h*.04),int(w*.05):w-int(w*.18)]
 		#cv2.imshow("testII {}".format(x),thresh2)
 		(h,w)=thresh2.shape[:2]
-		y=int(h*.0535)
+		y=int(h*.0533)
 		mlist=[]
 		output=""
 		count=0
@@ -1197,23 +1212,25 @@ def pg1ACT(marker):
 	ACT1fix=picfix(imgACT1,1)
 	ACT1=SS_ACT1(ACT1fix)
 	#cv2.imshow("ACTpaper1",ACT1fix)
+	#cv2.waitKey(0)
 	print(ACT1)
 	print(len(ACT1))
 	h1=getGuesses(ACT1)
 	print(h1)
 	print(len(h1))
+	
 	print("********************************************")
 	return ACT1
 	
-
 def pg2ACT(marker):
 	hold="images/{}/ACTPG{}2.jpg".format(marker,marker)
 	imgACT2 = cv2.imread(hold)
-	#cv2.imshow("ACTpaper2",imgACT2)	
-	#cv2.waitKey(0)
+	cv2.imshow("ACTpaper2",imgACT2)	
+	cv2.waitKey(0)
 	ACT2fix=picfix(imgACT2,1)
 	ACT2=SS_ACT2(ACT2fix)
-	#cv2.imshow("ACTpaper2",ACT2fix)
+	cv2.imshow("ACTpaper2",ACT2fix)
+	cv2.waitKey(0)
 	print(ACT2)
 	print(len(ACT2))
 	h1=getGuesses(ACT2)
@@ -1269,7 +1286,6 @@ def PSATmanage(fileobj,mark):
 	processOut(hold41,fileobj)
 	processOut(hold42,fileobj)
 	
-
 def SATmanage(fileobj,mark):
 	hold1=pg1SAT(mark)
 	hold2=pg2SAT(mark)
@@ -1295,16 +1311,17 @@ def ACTmanage(fileobj,mark):
 	hold2=pg2ACT(mark)
 	hold3=pg3ACT(mark)
 	hold4=pg4ACT(mark)
+	
 	fileobj.write("testF\ntestL\n")
 	fileobj.write("{}\n{}\n{}\n{}\n".format(len(hold1),len(hold2),len(hold3),len(hold4)))
 	processOut(hold1,fileobj)
-	fileobj.write("************************\n")
+	#fileobj.write("************************\n")
 	processOut(hold2,fileobj)
-	fileobj.write("************************\n")
+	#fileobj.write("************************\n")
 	processOut(hold3,fileobj)
-	fileobj.write("************************\n")
+	#fileobj.write("************************\n")
 	processOut(hold4,fileobj)
-	fileobj.write("************************\n")
+	#fileobj.write("************************\n")"""
 
 def getGuesses(answers):
 	y=[]

@@ -1,4 +1,4 @@
-import codecs,re,collections,time
+import codecs,re,collections,time, sys
 
 class Question(object):
     def __init__(self,num,akey,testName,secName):
@@ -39,7 +39,6 @@ class Question(object):
     def printQ(self):
         return '{:>3}: Key: {:<5} Resp: {:<5} V: {:<5} Guess?: {:<5}'.format(self.num,self.akey,self.resp,self.val,self.guess)
     
-
 class Category(object):
     def __init__(self,cat,ql):
         self.cat=cat
@@ -53,8 +52,12 @@ class Category(object):
         self.totnum=len(self.ql)
         self.countpos=0
         self.countneg=0
+        #print("XXXXXXXX")
+        #print(self.totnum)
+        #print("XXXXXXXX")
         for x in range(0,self.totnum):
-            tempq=int(self.ql[x].quest)        
+            tempq=int(self.ql[x].quest)
+            #print(tempq)
             if anslist[tempq-1].val=='C':
                 self.countpos+=1
             else:
@@ -137,7 +140,11 @@ class TestHold(object):
                             self.qListAns[y].setCat(self.catList[x].cat)
     
     def doCalc(self):
+        #print(len(self.catList))
         for x in range(0,len(self.catList)):
+            #print("CCCCCCCCCCCCCCC")
+            #print(x)
+            #print("CCCCCCCCCCCCCCC")
             self.catList[x].calcStat(self.qListAns)
     
     def getqcats(self):
@@ -237,7 +244,7 @@ class TestHold(object):
 
     def getSecStats(self):
         ql=self.qListAns
-        out='  Raw performance: {} out of {}, {:>3}\n'.format(self.cAns,len(ql),round(self.cAns/len(ql), 3)*100)
+        out='  Raw performance: {} out of {}, {:>3}%\n'.format(self.cAns,len(ql),round(self.cAns/len(ql), 3)*100)
         out+='          Guesses: {} out of {}, {:>3}%\n'.format(self.gAns,len(ql),round(self.gAns/len(ql), 3)*100)
         out+='  Correct Guesses: {} out of {}, {:>3}%\n'.format(self.gperf,self.gAns,round(self.gperf/self.gAns, 3)*100)
         out+='Incorrect Guesses: {} out of {}, {:>3}%\n'.format(self.incgperf,self.gAns,round(self.incgperf/self.gAns, 3)*100)
@@ -251,10 +258,12 @@ class TestHold(object):
         for x in range(0,len(self.qListAns)):
             print(self.qListAns[x].printQ())
 
+    #def getLastTEN(self):
+    #    for x in rnage
 
-def runGrade():
+def runGradeSAT():
     #start=time.time()
-    fileobj=open("ggtest.txt", "r")
+    fileobj=open("SAT1KEY.txt", "r")
     tname=fileobj.readline().strip()
     tL=fileobj.readline().strip()
     tests=[]
@@ -270,13 +279,15 @@ def runGrade():
         tests[x].getCats(fileobj)
         tests[x].getkeys(fileobj)
 
-    fileobj2=open("studentRESTEST.txt", "r")
+    fileobj2=open("SATTESTCASE.txt", "r")
     fName=fileobj2.readline().strip()
     lName=fileobj2.readline().strip()
+
     sec1=fileobj2.readline().strip()
     sec2=fileobj2.readline().strip()
     sec3=fileobj2.readline().strip()
     sec4=fileobj2.readline().strip()
+
     redres=readres(fileobj2,sec1)
     writeres=readres(fileobj2,sec2)
     MNCres=readres(fileobj2,sec3)
@@ -289,16 +300,24 @@ def runGrade():
     tests[2].setanswers(MNCres)
     tests[3].setanswers(MCalcres)
     
-    print("SECTION 1")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Reading SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     #tests[0].printC()
     tests[0].printQuestions()
-    print("SECTION 2")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Writing Language SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     #tests[1].printC()
     tests[1].printQuestions()
-    print("SECTION 3")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Math NoCALC SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     #tests[2].printC()
     tests[2].printQuestions()
-    print("SECTION 4")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Math CALC SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     #tests[3].printC()
     tests[3].printQuestions()
 
@@ -307,9 +326,21 @@ def runGrade():
     tests[2].doCalc()
     tests[3].doCalc()
 
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Reading SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[0].getstat())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Writing Language SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[1].getstat())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Math NoCALC SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[2].getstat())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Math CALC SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[3].getstat())
     """
     print(tests[0].cAns)
@@ -320,7 +351,7 @@ def runGrade():
     print(tname)
     #end=time.time()
     #print(end-start)
-    scorehold=getScoreCon(fileobj,scoreNum)
+    scorehold=getScoreSAT(fileobj,scoreNum)
     #print(scorehold)
     #3+2 then 0 then 1
     math=int(tests[2].cAns) + int(tests[3].cAns)
@@ -337,14 +368,21 @@ def runGrade():
     print('Writing and Language Score: {}'.format(int(writingScore)*10))
     print('Total Score: {}'.format(((int(mathScore))+(int(readingScore)*10)+(int(writingScore)*10))))
     
-    print("***************************************************")
-    print("sec 1")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Reading SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[0].getSecStats())
-    print("sec 2")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Writing Language SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[1].getSecStats())
-    print("sec 3")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Math NoCALC SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[2].getSecStats())
-    print("sec 4")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Math CALC SECTION")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[3].getSecStats())
 
     tests[0].setQuestCats()
@@ -366,38 +404,201 @@ def runGrade():
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     #list1[0].printCat()
     #tests[4].printC()
-    print("Guesses for Section 1")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Reading SECTION Guesses")
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[0].getGuesses())
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    print("Guesses for Section 2")
+    print("Writing Language SECTION Guesses")
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[1].getGuesses())
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    print("Guesses for Section 3")
+    print("Math NoCALC Section Guesses")
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[2].getGuesses())
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    print("Guesses for Section 4")
+    print("Math CALC Section Guesses")
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[3].getGuesses())
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    print("Incorrect for section 1")
+    print("Incorrect for Reading Section")
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[0].getIncorrect())
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    print("Incorrect for section 2")
+    print("Incorrect for Writing Language Section")
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[1].getIncorrect())
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    print("Incorrect for section 3")
+    print("Incorrect for Math No CALC Section")
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[2].getIncorrect())
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    print("Incorrect for section 4")
+    print("Incorrect for Math CALC Section")
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(tests[3].getIncorrect())
+
+def runGradeACT():
+    #start=time.time()
+    fileobj=open("ACTP10KEY.txt", "r")
+    tname=fileobj.readline().strip()
+    tL=fileobj.readline().strip()
+    tests=[]
+    
+    for x in range(0,int(tL)):
+        name=fileobj.readline().strip()
+        cats=fileobj.readline().strip()
+        ques=fileobj.readline().strip()
+        tests.append(TestHold(name,cats,ques,tname))
+    scoreNum=fileobj.readline().strip()
+    
+    for x in range(0,int(tL)):
+        tests[x].getCats(fileobj)
+        tests[x].getkeys(fileobj)
+
+    fileobj2=open("ACTTESTCASE.txt", "r")
+    fName=fileobj2.readline().strip()
+    lName=fileobj2.readline().strip()
+    
+    sec1=fileobj2.readline().strip()
+    sec2=fileobj2.readline().strip()
+    sec3=fileobj2.readline().strip()
+    sec4=fileobj2.readline().strip()
+
+    englishres=readres(fileobj2,sec1)
+    mathres=readres(fileobj2,sec2)
+    readingres=readres(fileobj2,sec3)
+    scienceres=readres(fileobj2,sec4)
+
+    #print(redres)
+    
+    tests[0].setanswers(englishres)
+    tests[1].setanswers(mathres)
+    tests[2].setanswers(readingres)
+    tests[3].setanswers(scienceres)
+    
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("ENGLISH Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    #tests[0].printC()
+    tests[0].printQuestions()
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("MATH Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    #tests[1].printC()
+    tests[1].printQuestions()
+    
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("READING Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    #tests[2].printC()
+    tests[2].printQuestions()
+    
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("SCIENCE Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    #tests[3].printC()
+    tests[3].printQuestions()
+    
+    tests[0].doCalc()
+    tests[1].doCalc()
+    tests[2].doCalc()
+    tests[3].doCalc()
+    
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("English Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[0].getstat())
+    
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Math Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[1].getstat())
+    
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Reading Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[2].getstat())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Science Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[3].getstat())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    """
+    print(tests[0].cAns)
+    print(tests[1].cAns)
+    print(tests[2].cAns)
+    print(tests[3].cAns)
+    """
+    print(tname)
+    #end=time.time()
+    #print(end-start)
+    scorehold=getScoreACT(fileobj,scoreNum)
+    #print(scorehold)
+    english=int(tests[0].cAns)
+    math=int(tests[1].cAns)
+    reading=int(tests[2].cAns)
+    science=int(tests[3].cAns)
+
+    englishScore=int(scorehold[0][english])
+    mathScore=int(scorehold[1][math])
+    readingScore=int(scorehold[2][reading])
+    scienceScore=int(scorehold[3][science])
+    totscore=round(((englishScore+mathScore+readingScore+scienceScore)/4), 0)
+    print("***************************************************")
+    print('Writing Score: {}'.format(englishScore))
+    print('Math Score: {}'.format(mathScore))
+    print('Reading Score: {}'.format(readingScore))
+    print('Science Score: {}'.format(scienceScore))
+    print('Total Score: {}'.format(totscore))
+    print("***************************************************")
+    print("sec 1")
+    print(tests[0].getSecStats())
+    print("sec 2")
+    print(tests[1].getSecStats())
+    print("sec 3")
+    print(tests[2].getSecStats())
+    print("sec 4")
+    print(tests[3].getSecStats())
+
+    tests[0].setQuestCats()
+    tests[1].setQuestCats()
+    tests[2].setQuestCats()
+    tests[3].setQuestCats()
+
+    print("Guesses for English Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[0].getGuesses())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Guesses for Math Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[1].getGuesses())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Guesses for Reading Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[2].getGuesses())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Guesses for Science Section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[3].getGuesses())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Incorrect for English section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[0].getIncorrect())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Incorrect for Math section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[1].getIncorrect())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Incorrect for Reading section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[2].getIncorrect())
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print("Incorrect for Science section")
+    print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+    print(tests[3].getIncorrect())
+    #" ""
 
 def combList(l1,l2):
     lx=[]
@@ -432,7 +633,7 @@ def combList(l1,l2):
 
     return lx
 
-def getScoreCon(fileobj,amt):
+def getScoreSAT(fileobj,amt):
     testhold=[]
     testhold.append([])
     testhold.append([])
@@ -450,14 +651,38 @@ def getScoreCon(fileobj,amt):
         #print(result)
     return testhold
     
+def getScoreACT(fileobj,amt):
+    testhold=[]
+    testhold.append([])
+    testhold.append([])
+    testhold.append([])
+    testhold.append([])
+    for x in range(0, int(amt)):
+        line=fileobj.readline()
+        #print(line)
+        result=0
+        result=line.split()
+        if len(result)>1 and result[1]:
+            testhold[0].append(result[1])
+        if len(result)>2 and result[2]:
+            testhold[1].append(result[2])
+        if len(result)>3 and result[3]:
+            testhold[2].append(result[3])
+        if len(result)>4 and result[4]:
+            testhold[3].append(result[4])
+        #print(result)
+    return testhold
+
 def readres(fileobj2, amt):
     relist=[]
     for x in range(0, int(amt)):
         relist.append(fileobj2.readline().strip().split())
-    
+    #print(relist[1])
     return relist
 
-
-
-
-runGrade()
+if int(sys.argv[1])==1:
+    runGradeACT()
+if int(sys.argv[1])==2:
+    runGradeSAT()
+if int(sys.argv[1])==3:
+    runGradePSAT()

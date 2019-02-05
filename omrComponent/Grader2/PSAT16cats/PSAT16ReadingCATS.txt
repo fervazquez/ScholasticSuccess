@@ -1,0 +1,71 @@
+21
+47
+M	"ISPY"					
+C	GivenLine			3 4 8 40
+S	Vocab				9 11 12 24 25 29 34 44
+C	ImpliedLine 			1 5 6 13 14 16 20 22 30 32 41 45
+C	ImplySuggInfer			1 36
+C	GivenFigure(SATonly)		17 18 27 28
+M	BROAD-SCOPE				
+C	EntirePassage			10 19 28 35 39
+C	GeneralTheme			37 38
+C	Lines/Paragraph 		26 38 43 47
+M	DUALPASSAGE			29 30 31 32 33 34
+C	ComparingAuthors 		35 36 37 38 
+M	ANSWERCHALLENGES			
+C	BuzzWords			
+C	Extremes			
+M	Elimination			
+M	Rhetoric			3 4 
+M	FORMATCHALLENGES			
+C	Follow-up			2 7 13 15 21 23 31 33 42 46
+C	Pre-Followup			1 6 13 14 22 30 32 40 41 45
+C	Flip-the-Page			4 5 6 7 8 12 13 14 15 23 24 25 26 27 28 37 46 47
+A
+B
+B
+B
+C
+D
+B
+A
+D
+A
+D
+D
+D
+A
+C
+B
+D
+B
+A
+C
+B
+D
+B
+D
+C
+B
+B
+A
+D
+B
+D
+A
+C
+A
+A
+C
+B
+C
+C
+C
+B
+B
+A
+A
+A
+D
+C
+

@@ -1,0 +1,32 @@
+31
+M	GRAMMAR
+C	Choose the Modifier
+C	Faulty Comparison
+C	Idioms
+C	Ind / Dependent Clauses
+S	Conjunctions
+S	Punctuation
+SS	Apostrophes
+SS	Dashes
+SS	Colons
+SS	Commas
+SS	Semicolons
+SS	End of Sentence ( . ? ! )
+C	Prepositions
+C	Tense Agreement
+C	Nouns / Pronouns
+SS	Ambiguous PN
+SS	Possessive N/PN
+SS	Singular / Plural
+M	RHETORIC
+C	Question's Intent
+C	Passage's Intent
+S	Delete or Add
+S	Organization 
+C	Clarity / Conciseness
+S	Redundancies
+C	Given Figure
+C	Not / Except / Least
+C	Parallelism
+C	Transition
+C	Word Choice
