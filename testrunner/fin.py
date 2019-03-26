@@ -1,8 +1,10 @@
-from pdf2image import convert_from_path
+from pdf2image import convert_from_path,convert_from_bytes
+from PyPDF2 import PdfFileWriter, PdfFileReader
 from imutils.perspective import four_point_transform
 from imutils import contours
 import numpy as np
 import sys, cv2, imutils, os
+import tempfile
 
 """
 ACT Codes are ACTP10, ACTP16
@@ -17,10 +19,15 @@ gFac=350
 def runner():
     configlist=configsetup()
     listStore=convertstart(sys.argv[1],configlist)
-    #print(listStore)
-    textout(listStore)
+    print(listStore)
+    nlist=textout(listStore)
+    print("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP")
+    for x in nlist:
+        print(len(x[1]))
+    #print(nlist)
 
 def textout(listHold):
+    klist=[]
     for x in listHold:
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
         print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
@@ -31,19 +38,27 @@ def textout(listHold):
         print("****************************************")
         fileobj=open('{}/outdata.txt'.format(x[5]),"w")
         fileobj2=open('{}/outexcel.txt'.format(x[5]),"w")
+        xlen=len(x)
         print(x[5])
         print("************")
         print(len(x))
         print("***********")
-        for sec in x[len(x)-1]:
+        for sec in x[xlen-1]:
             for z in sec:
                 store='{} {} {}\n'.format(z[0],z[1],z[2])
                 fileobj.write(store)
-                store2='{}\n'.format(z[1])
+                if z[2]=='G':
+                    store2='{}?\n'.format(z[1])    
+                else:
+                    store2='{}\n'.format(z[1])
                 fileobj2.write(store2)
                 #print(len(z))
             fileobj.write("*************************************\n")
             fileobj2.write("*************************************\n")
+        print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+        klist.append([[x[0],x[1],x[5]],x[xlen-1]])
+    return klist
 
 
 def configsetup():
@@ -70,14 +85,25 @@ def convertstart(img,conlist):
         x.append(x[0]+"_"+x[1]+"_"+img)
         namehelp.append(x)
     #print(namehelp)
-    pdflist= convert_from_path(pdf)
-    print(len(pdflist))
+    
     check=os.getcwd()
     check=check+"/dep/"+img
     try:
         os.mkdir(check)
     except FileExistsError:
         print("Directory exists, Program will continue")
+
+
+    
+    #with tempfile.TemporaryDirectory() as path:
+        #images_from_path = convert_from_path('/home/kankroc/example.pdf', output_folder=path)
+     #   pdflist= convert_from_path(pdf,output_folder=path)
+    print("we got a problem")
+    
+    #inputpdf= PdfFileReader(pdf)
+    pdflist= convert_from_path(pdf)
+    #h=inputpdf.getNumPages()
+    #rint(h)
 
     current=0
     for x in namehelp:
@@ -97,19 +123,40 @@ def convertstart(img,conlist):
         except FileExistsError:
             print("Directory exists, Program will continue")
         print("ha")
+
+
         #print(checktemp)
         x.append(checktemp)
+        """
+        outputpdf=PdfFileWriter()
+        for z in range(current,current+x[3]+1):
+            outputpdf.addPage(inputpdf.getPage(z))
+        jk='{}/{}/{}test.pdf'.format(check,x[2],x[2])
+        #outputStream = open(file(jk,"wb"))
+        """
+        #outputpdf.write(open(jk,"wb"))
+        #print(outputpdf.getNumPages())
+        #current=x[3]+1+current
+        #print(jk)
+        #lo=open(jk,"rb")
+        #pdflist= convert_from_path(lo)
+        #print(len(pdflist))
+        
+        print("LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL")
         print(x)
         count=0
-
+        #"""
         for y in range(0,x[3]):
             num=y+current
+            print("look here")
+            print(num)
             if y<conlist[0]:
                 pdflist[num].save('{}/{}/surveyPG{}.jpg'.format(check,x[2],y),'JPEG')
             else:
                 hold='{}/{}/PG{}.jpg'.format(check,x[2],y)
                 pdflist[num].save(hold,'JPEG')
-                print('{} {}'.format(x[4], y))         
+                #print('{} {}'.format(x[4], y))
+                    
                 if (x[4]=='SAT' and (y==2+conlist[0])) or (x[4]=='SAT' and y==(4+conlist[0])):
                     temp=picfixmass(2,hold)
                     x.append(temp[0])
@@ -120,18 +167,26 @@ def convertstart(img,conlist):
                     x.append(temp[1])
                 else:
                     x.append(picfixmass(1,hold))
+                
                 count+=1
                 print(count)
                 #pdflist[num]
+        
+        if x[4]=='SAT':
+            current+=1
         print(len(x))
         x.append(testmanage(x))
         print(len(x))
         current+=x[3]
+        #current+=1
+        #"""
+
     #print(namehelp)
-    print(check)
+    #print(check)
     print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
     print("____________________________________________________________")
     return namehelp
+    
     
 def testmanage(holdlist):
     if holdlist[4]=='ACT':
