@@ -96,6 +96,7 @@ def splitimg(pdf,tlist,name,ssize):
                         pichold.append(picfixmass(1,hold))
 
         x.append(pichold)
+        print(x)
         x.pop(5)
         x.append(testmanage(x))
     print(tlist)
