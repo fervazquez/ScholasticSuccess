@@ -1,0 +1,55 @@
+from pdf2image import convert_from_path
+from PyPDF2 import PdfFileWriter, PdfFileReader
+from imutils.perspective import four_point_transform
+from imutils import contours
+import numpy as np
+import sys, cv2, imutils, os
+
+
+def runner():
+    try:
+        doc = parseinput(sys.argv[1])
+    except:
+        print("Program stopped at line 11")
+        sys.exit("line 11 you twat")
+
+    
+
+def parseinput(nameIn):
+    inputpdf=PdfFileReader(open("{}.pdf".format(nameIn), "rb"))
+    print(inputpdf.numPages)
+    for i in range(inputpdf.numPages):
+        output=PdfFileWriter()
+        output.addPage(inputpdf.getPage(i))
+        with open("./currtemp/{}.pdf".format(i),"wb") as outstream:
+            output.write(outstream)
+    
+    dirs=os.getcwd()
+    dirs+='/currtemp/'
+    pdflist=[]
+    print(dirs)
+    for x in os.listdir(dirs):
+        y=dirs+x
+        pdflist.append(x)
+
+    for x in range(len(pdflist)):
+        for t in range(0,len(pdflist)-x-1):
+            w=''
+            for y in range(len(pdflist[t])):
+                if pdflist[t][y] =='.':
+                    break
+                w+=pdflist[t][y]
+
+            tw=''
+            for y in range(len(pdflist[t+1])):
+                if pdflist[t+1][y] =='.':
+                    break
+                tw+=pdflist[t+1][y]
+            
+            if int(tw) < int(w):
+                pdflist[t+1],pdflist[t]=pdflist[t],pdflist[t+1]
+    print(pdflist)
+    return pdflist
+
+
+runner()

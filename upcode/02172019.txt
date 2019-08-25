@@ -1,4 +1,0 @@
-GigiSpice	SAT3
-ThomasJohnson	SAT3
-JacksonHall	SAT3
-AbigailBrantman	SAT3

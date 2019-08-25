@@ -5,10 +5,17 @@ from imutils import contours
 import numpy as np
 import sys, cv2, imutils, os
 
-gFac=350
-surveysize=2
+gFac=325
+#Change this when needed
+surveysize=4
+#surveysize=0
 def runner():
-    pdf=parseinput(sys.argv[1])
+    try:
+        pdf=parseinput(sys.argv[1])
+    except:
+        print("this bitch broke")
+        sys.exit("you twat")
+
     tlist=getNames(sys.argv[1])
     print(tlist)
     outlist=splitimg(pdf,tlist,sys.argv[1],surveysize)
@@ -57,13 +64,14 @@ def splitimg(pdf,tlist,name,ssize):
             print("Directory exists, Program will continue")
 
         templist=[]
-        if x[1]=="ACTP10" or x[1]=="ACTP16":
+        if x[1]=="ACTP10" or x[1]=="ACTP16" or x[1]=="A06":
             x.append(4+ssize)
             x.append("ACT")
             templist,pdf=savepdfs(pdf,x[3])
             x.append(templist)
-        elif x[1]=="SAT2" or x[1]=="SAT4" or x[1]=="SAT3":
-            x.append(6+ssize)
+        elif x[1]=="SAT2" or x[1]=="SAT4" or x[1]=="SAT3" or x[1]=="S03":
+            x.append(5+ssize)
+            #x.append(6+ssize)
             x.append("SAT")
             templist,pdf=savepdfs(pdf,x[3])
             x.append(templist)
@@ -74,13 +82,16 @@ def splitimg(pdf,tlist,name,ssize):
             x.append(templist)
             
         pichold=[]
+        print("*************************HEHREHE************************************************")
+        print(x)
+        print("********************************HEHHRHEHRHERH*****************************************")
         for y in range(0,len(x[5])):
             x[5][y]=convert_from_path("./currtemp/{}".format(x[5][y]))
 
             if y<ssize:
                 x[5][y][0].save('{}/surveyPage{}.jpg'.format(checktemp,y),'JPEG')
             else:
-                if y<7:
+                if y<8:
                     hold='{}/Page{}.jpg'.format(checktemp,y)
                     x[5][y][0].save(hold,'JPEG')
 
@@ -94,6 +105,16 @@ def splitimg(pdf,tlist,name,ssize):
                         pichold.append(temp[1])
                     else:
                         pichold.append(picfixmass(1,hold))
+                        # try:
+                        #     pichold.append(picfixmass(1,hold))
+                        # except:
+                        #     try: 
+                        #         pichold.append(picfixmass2(1,hold))
+                        #     except:
+                        #         print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
+                        #         print("this bitch broke at 109 on page {}".format(y))
+                        #         print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
+
 
         x.append(pichold)
         print(x)
@@ -122,7 +143,11 @@ def getNames(txt):
 
 def parseinput(nameIn):
     inputpdf=PdfFileReader(open("{}.pdf".format(nameIn), "rb"))
+    print(inputpdf.numPages)
     for i in range(inputpdf.numPages):
+        #if i>-1:    #remember to remove
+            #pol=i-2
+        #    pol=1
         output=PdfFileWriter()
         output.addPage(inputpdf.getPage(i))
         with open("./currtemp/{}.pdf".format(i),"wb") as outstream:
@@ -218,13 +243,33 @@ def PSATOMR(listPSAT):
     return [out1,out2,out31,out32,out41,out42]
 
 def SATOMR(listSAT):
+    print("########################yyyyyyyyyyyyyyyy#########################")
+    print(len(listSAT))
+    print("########################yyyyyyyyyyyyyyyy#########################")
     out1=SS_PSAT(listSAT[5][0],53)
     out2=SS_PSAT(listSAT[5][1],45)
     out31=SS_PSAT31(listSAT[5][3],16)
     out32=SS_PSATFR(listSAT[5][2],16,5)
     out4=SS_PSAT(listSAT[5][4],31)
-    out51=SS_PSATFR(listSAT[5][5],31,5)
-    out52=SS_PSATFR(listSAT[5][6],36,3)
+    try:
+        out51=SS_PSATFR(listSAT[5][5],31,5)
+    except:
+        print("this shit fucked up here SATOUT51")
+        out51=[]
+        out51.append(['31','-','G'])
+        out51.append(['31','-','G'])
+        out51.append(['31','-','G'])
+        out51.append(['31','-','G'])
+        out51.append(['31','-','G'])
+    try:
+        out52=SS_PSATFR(listSAT[5][6],36,3)
+    except:
+        print("this shit fucked up here SATOUT52")
+        out52=[]
+        out52.append(['36','-','G'])
+        out52.append(['37','-','G'])
+        out52.append(['38','-','G'])
+    
     print(out1)
     print("\n")
     print(out2)
@@ -648,6 +693,8 @@ def frCalc(data):
         return "INV"
     if FRRep[0] == '/':
         return "INV"
+    if FRRep[0] == '.':
+        return "INV"
     if len(FRRep)==2 and FRRep[1] == '/':
         return "INV"
     if len(FRRep)==3 and FRRep[2] == '/':
@@ -713,6 +760,7 @@ def picfixmass(typet,loc):
     #paper = four_point_transform(image, docCnt.reshape(4, 2))
     warped = four_point_transform(gray, docCnt.reshape(4, 2))
 
+    #warped=gray
     (h,w)=warped.shape[:2]
     gray2 = warped[int(h*0.02):h-int(h*.02),int(w*.02):w-int(w*.02)]
     #cv2.imshow("check help",warped)
@@ -748,6 +796,117 @@ def picfixmass(typet,loc):
     # apply a four point perspective transform to both the
     # original image and grayscale image to obtain a top-down
     # birds eye view of the paper
+    #cv2.imshow("check TTTT",gray2)
+    #print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
+    #cv2.waitKey(0)
+
+
+    areaStore=[]
+    if num == 1:
+        paper = four_point_transform(gray2, docCnt.reshape(4, 2))
+        #cv2.imshow("check 2",paper)
+        #print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
+        #cv2.waitKey(0)
+        return paper
+    if num == 2:
+        print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
+        areaStore.append(four_point_transform(gray2, docstore[0].reshape(4, 2)))
+        areaStore.append(four_point_transform(gray2, docstore[1].reshape(4, 2)))
+        #cv2.imshow("check 2",areaStore[1])
+        #cv2.imshow("check 21",areaStore[0])
+        #cv2.waitKey(0)
+        return areaStore
+    #paper = four_point_transform(image, docCnt.reshape(4, 2))
+    #warped = four_point_transform(gray2, docCnt.reshape(4, 2))
+    #cv2.imshow("check22",warped)
+    #cv2.imshow("check",gray2)
+    cv2.waitKey(0)
+
+
+def picfixmass2(typet,loc):
+    num=typet
+    help1=cv2.imread(loc)
+    #cv2.imshow("name",help1)
+    gray = cv2.cvtColor(help1, cv2.COLOR_BGR2GRAY)
+    #cv2.imshow("check 0",gray)
+    #cv2.waitKey(0)
+
+    (h,w)=gray.shape[:2]
+    gray = gray[int(h*0.05):h-int(h*.04),int(w*.05):w-int(w*.05)]
+    #cv2.imshow("check 6",gray)
+    #cv2.imwrite("test.jpg",gray)
+    #cv2.waitKey(0)
+    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+    edged = cv2.Canny(blurred, 75, 200)
+    # find contours in the edge map, then initialize
+    # the contour that corresponds to the document
+    cnts = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL,
+        cv2.CHAIN_APPROX_SIMPLE)
+    cnts = cnts[0] if imutils.is_cv2() else cnts[1]
+    docCnt = None
+    # ensure that at least one contour was found
+    if len(cnts) > 0:
+        # sort the contours according to their size in
+        # descending order
+        cnts = sorted(cnts, key=cv2.contourArea, reverse=True)
+        # loop over the sorted contours
+        for c in cnts:
+            # approximate the contour
+            peri = cv2.arcLength(c, True)
+            approx = cv2.approxPolyDP(c, 0.02 * peri, True)
+            # if our approximated contour has four points,
+            # then we can assume we have found the paper
+            if len(approx) == 4:
+                docCnt = approx
+                print("LLLLLLLLLL")
+                break
+    # apply a four point perspective transform to both the
+    # original image and grayscale image to obtain a top-down
+    # birds eye view of the paper
+    #paper = four_point_transform(image, docCnt.reshape(4, 2))
+    warped = four_point_transform(gray, docCnt.reshape(4, 2))
+
+    warped=gray
+    (h,w)=warped.shape[:2]
+    gray2 = warped[int(h*0.02):h-int(h*.02),int(w*.02):w-int(w*.02)]
+    #cv2.imshow("check help",warped)
+    #cv2.waitKey(0)
+    blurred = cv2.GaussianBlur(gray2, (5, 5), 0)
+    edged = cv2.Canny(blurred, 75, 200)
+    # find contours in the edge map, then initialize
+    # the contour that corresponds to the document
+    cnts = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL,
+        cv2.CHAIN_APPROX_SIMPLE)
+    cnts = cnts[0] if imutils.is_cv2() else cnts[1]
+    docCnt = None
+    docstore=[]
+    # ensure that at least one contour was found
+    if len(cnts) > 0:
+        # sort the contours according to their size in
+        # descending order
+        cnts = sorted(cnts, key=cv2.contourArea, reverse=True)
+        # loop over the sorted contours
+        for c in cnts:
+            # approximate the contour
+            peri = cv2.arcLength(c, True)
+            approx = cv2.approxPolyDP(c, 0.02 * peri, True)
+            # if our approximated contour has four points,
+            # then we can assume we have found the paper
+            if len(approx) == 4 and num==1:
+                docCnt = approx
+                print("LLLLLLLLLL")
+                break
+            if len(approx) == 4 and num ==2:
+                docCnt = approx
+                docstore.append(docCnt)
+    # apply a four point perspective transform to both the
+    # original image and grayscale image to obtain a top-down
+    # birds eye view of the paper
+    #cv2.imshow("check TTTT",gray2)
+    #print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
+    #cv2.waitKey(0)
+
+
     areaStore=[]
     if num == 1:
         paper = four_point_transform(gray2, docCnt.reshape(4, 2))

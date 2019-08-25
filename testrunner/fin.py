@@ -151,6 +151,7 @@ def convertstart(img,conlist):
             print("look here")
             print(num)
             if y<conlist[0]:
+                print("JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ")
                 pdflist[num].save('{}/{}/surveyPG{}.jpg'.format(check,x[2],y),'JPEG')
             else:
                 hold='{}/{}/PG{}.jpg'.format(check,x[2],y)
@@ -703,7 +704,7 @@ def picfixmass(typet,loc):
     help1=cv2.imread(loc)
     #cv2.imshow("name",help1)
     gray = cv2.cvtColor(help1, cv2.COLOR_BGR2GRAY)
-    #cv2.imshow("check 0",gray)
+    ##cv2.imshow("check 0",gray)
     #cv2.waitKey(0)
 
     (h,w)=gray.shape[:2]
@@ -779,9 +780,9 @@ def picfixmass(typet,loc):
     areaStore=[]
     if num == 1:
         paper = four_point_transform(gray2, docCnt.reshape(4, 2))
-        #cv2.imshow("check 2",paper)
-        #print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
-        #cv2.waitKey(0)
+        cv2.imshow("check 2",paper)
+        print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
+        cv2.waitKey(0)
         return paper
     if num == 2:
         print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
