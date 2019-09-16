@@ -1,0 +1,297 @@
+NICHOLA
+CLARKE
+10-18-2002
+8-25-2019
+21
+-1
+A02
+1 N
+2 Y
+3 N
+4 N
+5 N
+6 N
+7 N
+8 N
+9 Y
+10 N
+11 N
+12 A
+13 C
+14 A
+15 A
+16 B
+17 B
+18 A
+19 B
+20 B
+21 A
+22 B
+23 C
+24 A
+1.1 Y
+1.2 0
+1.3 0
+1.4 0
+2.1 Y
+2.2 0
+2.3 0
+2.4 0
+3.1 N
+3.2 0
+3.3 9
+3.4 5
+4.1 Y
+4.2 2
+4.3 0
+4.4 -1
+
+
+
+A
+J
+C
+H
+A
+J
+D
+H
+A
+J
+B
+H
+A
+J
+B
+H
+B
+F
+D
+G
+A
+G
+D
+F
+C
+G
+C
+J
+B
+H
+A
+G
+A
+J
+D
+F
+A
+F
+B
+H
+
+
+
+
+
+
+
+
+
+
+
+
+A
+J
+D
+H
+B
+J
+B
+J
+C
+F
+B
+G
+B
+H
+D
+H
+B
+J
+C
+H
+A
+G
+B
+H
+C
+F
+C
+H
+A
+J
+D
+H
+B
+G
+A
+F
+A
+F
+D
+J
+C
+G
+D
+J
+C
+J
+C
+H
+C
+F
+D
+H
+A
+F
+B
+G
+C
+F
+B
+G
+C
+H
+D
+F
+C
+H
+B
+G
+B
+G
+A
+F
+B
+J
+A
+D
+H
+E
+F
+E
+H
+E
+H
+B
+K
+C
+K
+B
+J
+B
+H
+D
+F
+D
+F
+B
+H
+A
+H
+B
+H
+E
+G
+C
+J
+D
+H
+B
+H
+D
+J
+A
+F
+B
+F
+E
+K
+D
+G
+C
+G
+B
+H
+A
+K
+C
+H
+D
+H
+E
+F
+E
+F
+C
+G
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C
+G
+D
+G
+C
+F
+C
+F
+D
+J
+C
+F
+B
+J
+C
+F
+B
+H
+B
+G
+D
+F
+C
+J
+A
+H
+A
+J
+C
+F
+B
+G
+D
+F
+C
+J
+B
+J
+A
+H

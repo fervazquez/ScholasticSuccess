@@ -1,0 +1,297 @@
+PARKER
+CRUMRINE
+10-19-2001
+9-2-2019
+21
+8
+A02
+1 N
+2 N
+3 N
+4 N
+5 N
+6 N
+7 N
+8 N
+9 N
+10 N
+11 Y
+12 D
+13 B
+14 A
+15 B
+16 B
+17 A
+18 A
+19 B
+20 A
+21 A
+22 B
+23 B
+24 A
+1.1 Y
+1.2 0
+1.3 0
+1.4 -1
+2.1 Y
+2.2 25
+2.3 0
+2.4 0
+3.1 Y
+3.2 0
+3.3 -1
+3.4 -1
+4.1 Y
+4.2 5
+4.3 0
+4.4 0
+
+
+
+C
+G
+A
+G
+B
+F
+A
+G
+A
+F
+B
+F
+A
+G
+A
+F
+W
+F
+A
+G
+B
+G
+B
+G
+B
+F
+B
+H
+A
+F
+W
+F
+A
+F
+A
+G
+A
+G
+C
+G
+
+
+
+
+
+
+
+
+
+
+
+
+A
+G
+C
+F
+A
+F
+A
+G
+A
+F
+B
+F
+A
+F
+A
+F
+A
+F
+A
+F
+B
+G
+A
+G
+A
+F
+B
+F
+A
+G
+A
+F
+A
+F
+A
+G
+A
+F
+C
+G
+D
+G
+C
+H
+C
+G
+C
+G
+A
+W
+C
+F
+C
+F
+B
+W
+A
+G
+A
+F
+A
+F
+A
+F
+A
+F
+A
+F
+A
+F
+A
+F
+A
+F
+A
+C
+K
+A
+J
+D
+G
+E
+G
+C
+K
+A
+F
+C
+F
+B
+F
+B
+K
+A
+F
+A
+J
+B
+J
+A
+G
+C
+H
+C
+K
+B
+F
+C
+H
+A
+H
+B
+G
+C
+G
+C
+F
+D
+H
+A
+G
+A
+K
+B
+K
+C
+H
+D
+K
+A
+H
+B
+J
+E
+F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B
+H
+D
+G
+C
+F
+A
+G
+D
+G
+D
+H
+A
+H
+D
+J
+D
+J
+D
+F
+C
+F
+A
+G
+B
+F
+B
+H
+B
+H
+C
+G
+A
+H
+B
+F
+B
+H
+C
+H

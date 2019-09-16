@@ -1,0 +1,297 @@
+BRYANNA
+WILDER
+6-28-2002
+8-25-2019
+21
+6
+A02
+1 Y
+2 N
+3 N
+4 N
+5 Y
+6 N
+7 N
+8 N
+9 Y
+10 N
+11 N
+12 A
+13 B
+14 A
+15 B
+16 B
+17 A
+18 B
+19 C
+20 B
+21 B
+22 B
+23 A
+24 B
+1.1 N
+1.2 0
+1.3 8
+1.4 5
+2.1 Y
+2.2 6
+2.3 25
+2.4 0
+3.1 N
+3.2 0
+3.3 9
+3.4 9
+4.1 Y
+4.2 2
+4.3 0
+4.4 0
+
+
+
+A
+F
+B
+H
+B
+J
+D
+H
+B
+H
+D
+H
+A
+J
+B
+H
+B
+F
+D
+J
+B
+G
+D
+H
+A
+G
+C
+F
+C
+G
+A
+G
+D
+J
+D
+J
+B
+F
+A
+F
+
+
+
+
+
+
+
+
+
+
+
+
+A
+G
+D
+H
+B
+J
+B
+J
+C
+J
+D
+H
+C
+H
+D
+H
+D
+J
+C
+G
+A
+J
+B
+J
+C
+F
+D
+H
+B
+H
+D
+F
+B
+H
+A
+F
+D
+F
+C
+J
+C
+G
+D
+J
+C
+J
+C
+H
+C
+G
+C
+J
+D
+F
+B
+G
+C
+F
+D
+G
+C
+H
+D
+H
+C
+H
+A
+G
+D
+J
+A
+G
+D
+H
+D
+D
+J
+E
+F
+D?
+H
+E
+H
+A
+F?
+C
+F
+E?
+J?
+B?
+F?
+D
+F
+A
+W?
+C
+F
+A
+G?
+B
+F?
+D?
+K?
+A?
+F?
+E
+K
+B
+J
+E
+J?
+B
+K
+B
+F
+B?
+G?
+D?
+G?
+B?
+F
+E
+H
+B?
+K
+W?
+J?
+A
+G
+A
+G
+C?
+G
+B?
+H?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C
+F
+D
+G
+C
+F
+B
+F
+D
+J
+B
+F
+A
+F
+C
+F
+B
+J
+D
+J
+D
+F
+B
+J
+B
+H
+B
+G
+C?
+F
+C?
+F
+A
+F
+C
+F
+A
+J
+A
+F

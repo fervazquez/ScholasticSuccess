@@ -1,0 +1,297 @@
+TREOR
+GICHERU
+3-5-2002
+8-25-2019
+2
+4
+A02
+1 N
+2 Y
+3 Y
+4 N
+5 Y
+6 Y
+7 Y
+8 N
+9 N
+10 N
+11 Y
+12 C
+13 C
+14 A
+15 B
+16 B
+17 -1
+18 A
+19 -1
+20 -1
+21 -1
+22 B
+23 A
+24 A
+1.1 Y
+1.2 8
+1.3 0
+1.4 0
+2.1 Y
+2.2 17
+2.3 0
+2.4 0
+3.1 Y
+3.2 4
+3.3 0
+3.4 0
+4.1 Y
+4.2 5
+4.3 0
+4.4 0
+
+
+
+A
+H
+D
+F
+D?
+G
+D
+H
+A
+J
+A
+H
+D
+F
+B
+G
+D
+F
+D
+H
+A
+H
+B
+H
+D
+F
+C
+H?
+A
+G
+C
+F
+B
+F
+D
+H
+B
+J?
+C?
+F
+
+
+
+
+
+
+
+
+
+
+
+
+B
+J
+A
+J
+B
+J
+B
+J
+C
+G
+B
+H
+D
+G?
+B
+G
+B
+J
+C
+G
+C
+J
+B
+H
+B
+H?
+D
+G
+B
+G
+C
+G
+B
+H?
+D
+H
+D
+F
+C
+G
+B
+G
+D
+J
+C
+H
+C
+H
+D
+H
+B?
+H
+A
+F
+D
+F
+D
+H
+C
+G
+C
+H
+D
+J
+B
+H
+B
+J
+A
+G
+B
+J
+C
+H
+B?
+D
+H
+E
+J
+C
+H
+C
+H
+E
+K
+C
+F
+B
+G
+B
+H
+B
+F
+D
+F
+B
+K
+A
+H?
+B
+F
+E
+J
+C
+G
+C
+K
+D
+K
+A
+J
+D
+F
+C
+F
+A
+J
+D
+F
+D
+J
+E
+F
+D
+G
+C
+F
+D
+G
+A?
+K
+A
+K
+B
+K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C
+G
+C
+G
+D
+H
+B?
+F
+B
+F
+C
+G
+A
+F
+C
+J
+B
+H
+A
+H
+D
+J
+C
+J
+A
+H
+A
+G
+D
+G
+C?
+H
+B?
+J
+D
+H
+A
+F
+B?
+J
