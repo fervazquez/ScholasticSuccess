@@ -1,0 +1,191 @@
+Hunter
+Sanders
+3-27-2003
+9-7-2019
+21
+445578
+P02
+1 Y
+2 Y
+3 N
+4 Y
+5 N
+6 N
+7 N
+8 N
+9 N
+10 N
+11 N
+12 A
+13 C
+14 A
+15 A
+16 C
+17 A
+18 B
+19 C
+20 A
+21 B
+22 C
+23 C
+24 A
+1.1 Y
+1.2 5
+1.3 0
+1.4 0
+2.1 Y
+2.2 8
+2.3 0
+2.4 0
+3.1 N
+3.2 0
+3.3 2
+3.4 5
+4.1 N
+4.2 0
+4.3 2
+4.4 5
+************************
+1 A NG
+2 A NG
+3 B NG
+4 B NG
+5 D NG
+6 B NG
+7 D NG
+8 A NG
+9 D NG
+10 A NG
+11 D NG
+12 D NG
+13 B NG
+14 A NG
+15 C NG
+16 B NG
+17 D NG
+18 B NG
+19 A NG
+20 D NG
+21 D NG
+22 D NG
+23 B NG
+24 D NG
+25 C NG
+26 B NG
+27 B NG
+28 A NG
+29 A NG
+30 D G
+31 A NG
+32 C NG
+33 D NG
+34 A NG
+35 D NG
+36 C NG
+37 C G
+38 D G
+39 C NG
+40 A NG
+41 C G
+42 B NG
+43 A G
+44 A NG
+45 A G
+46 B NG
+47 A G
+*************************
+1 D NG
+2 B NG
+3 C NG
+4 C NG
+5 B NG
+6 C NG
+7 A NG
+8 B G
+9 A NG
+10 D G
+11 D NG
+12 C NG
+13 C NG
+14 C G
+15 D NG
+16 B NG
+17 D NG
+18 A NG
+19 B NG
+20 A G
+21 A NG
+22 A NG
+23 D NG
+24 D NG
+25 C NG
+26 A NG
+27 A NG
+28 B NG
+29 D NG
+30 A NG
+31 D NG
+32 B NG
+33 B NG
+34 A G
+35 C NG
+36 B NG
+37 C NG
+38 A NG
+39 A G
+40 A NG
+41 D NG
+42 A NG
+43 C NG
+44 C NG
+*************************
+1 A NG
+2 A NG
+3 B NG
+4 C NG
+5 C NG
+6 B NG
+7 A NG
+8 B NG
+9 C NG
+10 D G
+11 D G
+12 B G
+13 C NG
+14 2 NG
+15 101 G
+16 Z G
+17 Z G
+*************************
+1 B NG
+2 A NG
+3 B NG
+4 D NG
+5 B NG
+6 A NG
+7 B NG
+8 C NG
+9 A NG
+10 D NG
+11 B NG
+12 A NG
+13 B NG
+14 B NG
+15 C G
+16 B NG
+17 D NG
+18 A NG
+19 D G
+20 D G
+21 C G
+22 D NG
+23 D G
+24 A NG
+25 C NG
+26 C G
+27 D G
+28 65 NG
+29 1 G
+30 Z NG
+31 Z NG
+*************************

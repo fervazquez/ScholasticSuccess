@@ -1,0 +1,191 @@
+CAROLINA
+HEREDIA
+3-7-2003
+9-7-2019
+21
+445578
+P02
+1 N
+2 N
+3 N
+4 N
+5 N
+6 N
+7 N
+8 Y
+9 Y
+10 Y
+11 DNE
+12 DNE
+13 D
+14 B
+15 A
+16 C
+17 C
+18 DNE
+19 C
+20 C
+21 B
+22 C
+23 C
+24 A
+1.1 Y
+1.2 0
+1.3 0
+1.4 0
+2.1 Y
+2.2 5
+2.3 0
+2.4 0
+3.1 N
+3.2 0
+3.3 4
+3.4 0
+4.1 N
+4.2 0
+4.3 5
+4.4 5
+************************
+1 A NG
+2 B NG
+3 B NG
+4 B NG
+5 C NG
+6 C NG
+7 D NG
+8 A NG
+9 D NG
+10 A NG
+11 D NG
+12 D NG
+13 B G
+14 D G
+15 D NG
+16 B NG
+17 D NG
+18 B NG
+19 B G
+20 D NG
+21 C NG
+22 D NG
+23 B NG
+24 C G
+25 C NG
+26 D G
+27 B NG
+28 A G
+29 A NG
+30 C G
+31 C NG
+32 A NG
+33 B NG
+34 A NG
+35 A G
+36 A NG
+37 B NG
+38 B NG
+39 C NG
+40 A NG
+41 D G
+42 D G
+43 A G
+44 A NG
+45 B G
+46 B G
+47 D NG
+*************************
+1 D NG
+2 B NG
+3 C NG
+4 C NG
+5 B NG
+6 C NG
+7 A NG
+8 C NG
+9 A NG
+10 D NG
+11 D NG
+12 B NG
+13 C NG
+14 C NG
+15 D NG
+16 A G
+17 B NG
+18 A G
+19 B NG
+20 C NG
+21 A NG
+22 A NG
+23 C G
+24 D NG
+25 A NG
+26 A NG
+27 A NG
+28 B G
+29 A G
+30 B NG
+31 B NG
+32 B G
+33 D NG
+34 D NG
+35 D NG
+36 B NG
+37 C NG
+38 A NG
+39 C NG
+40 D G
+41 B G
+42 D NG
+43 B NG
+44 A NG
+*************************
+1 D NG
+2 A NG
+3 B G
+4 A NG
+5 C G
+6 B NG
+7 A G
+8 B NG
+9 C NG
+10 A G
+11 A G
+12 C G
+13 D NG
+14 Z NG
+15 Z NG
+16 Z NG
+17 Z NG
+*************************
+1 B NG
+2 A NG
+3 B NG
+4 D NG
+5 B NG
+6 A NG
+7 B NG
+8 A NG
+9 A NG
+10 D NG
+11 A G
+12 C NG
+13 B NG
+14 B NG
+15 C G
+16 B G
+17 D NG
+18 B NG
+19 A G
+20 B NG
+21 D NG
+22 D NG
+23 D G
+24 C G
+25 C G
+26 D NG
+27 D NG
+28 65 NG
+29 3 NG
+30 180 NG
+31 1 NG
+*************************

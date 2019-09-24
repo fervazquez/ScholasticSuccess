@@ -1,0 +1,267 @@
+Christie
+Rusli
+12-29-2003
+9-14-2019
+22
+445578
+A06
+1 N
+2 Y
+3 N
+4 N
+5 N
+6 Y
+7 N
+8 Y
+9 Y
+10 N
+11 N
+12 A
+13 C
+14 B
+15 A
+16 B
+17 B
+18 A
+19 B
+20 B
+21 A
+22 D
+23 C
+24 A
+1.1 N
+1.2 0
+1.3 4
+1.4 3
+2.1 N
+2.2 0
+2.3 12
+2.4 10
+3.1 N
+3.2 0
+3.3 1
+3.4 1
+4.1 Y
+4.2 0
+4.3 0
+4.4 0
+************************
+1 B NG
+2 G NG
+3 A NG
+4 F NG
+5 C NG
+6 J NG
+7 B NG
+8 G NG
+9 A NG
+10 J NG
+11 A NG
+12 G NG
+13 C NG
+14 F NG
+15 A NG
+16 G NG
+17 A NG
+18 F NG
+19 C NG
+20 G NG
+21 A NG
+22 G NG
+23 B NG
+24 F NG
+25 B NG
+26 H G
+27 D NG
+28 J NG
+29 A NG
+30 H NG
+31 C NG
+32 J NG
+33 B NG
+34 H NG
+35 B NG
+36 J NG
+37 C NG
+38 F G
+39 B G
+40 H NG
+41 D NG
+42 H NG
+43 D NG
+44 G NG
+45 B NG
+46 F NG
+47 C NG
+48 J NG
+49 D NG
+50 H NG
+51 A NG
+52 J NG
+53 C NG
+54 G NG
+55 A NG
+56 H NG
+57 D NG
+58 J NG
+59 C NG
+60 J NG
+61 D NG
+62 J NG
+63 B NG
+64 J NG
+65 B NG
+66 F NG
+67 A NG
+68 J NG
+69 D NG
+70 G NG
+71 C NG
+72 G NG
+73 D NG
+74 F NG
+75 D NG
+*************************
+1 C NG
+2 F NG
+3 C NG
+4 J NG
+5 E NG
+6 G NG
+7 E NG
+8 H NG
+9 C NG
+10 K NG
+11 B NG
+12 F NG
+13 B G
+14 H G
+15 E G
+16 J NG
+17 B G
+18 F NG
+19 D NG
+20 F NG
+21 A NG
+22 G NG
+23 D NG
+24 F NG
+25 B NG
+26 G G
+27 C NG
+28 H NG
+29 D NG
+30 G G
+31 E G
+32 H G
+33 D NG
+34 F G
+35 B NG
+36 F NG
+37 D NG
+38 J G
+39 C NG
+40 G NG
+41 B NG
+42 J G
+43 E NG
+44 H NG
+45 E NG
+46 F NG
+47 B G
+48 G NG
+49 B G
+50 H G
+51 E NG
+52 G G
+53 A G
+54 F G
+55 B G
+56 G G
+57 B G
+58 J G
+59 E G
+60 G G
+*************************
+1 B NG
+2 J NG
+3 B NG
+4 H NG
+5 D NG
+6 F NG
+7 C NG
+8 H NG
+9 A NG
+10 F NG
+11 A NG
+12 H NG
+13 B NG
+14 G NG
+15 D NG
+16 H NG
+17 A NG
+18 G NG
+19 C NG
+20 J NG
+21 B NG
+22 F NG
+23 A NG
+24 H NG
+25 A NG
+26 J NG
+27 A NG
+28 F NG
+29 A NG
+30 G NG
+31 D NG
+32 J NG
+33 D NG
+34 G NG
+35 A NG
+36 H NG
+37 B NG
+38 J NG
+39 C NG
+40 G NG
+*************************
+1 B NG
+2 F NG
+3 D G
+4 G NG
+5 D G
+6 J G
+7 A NG
+8 G G
+9 C G
+10 J NG
+11 C G
+12 G NG
+13 A G
+14 H NG
+15 B NG
+16 J G
+17 D NG
+18 F NG
+19 B NG
+20 G NG
+21 C NG
+22 F NG
+23 A NG
+24 G NG
+25 D G
+26 G G
+27 C G
+28 F NG
+29 B G
+30 J G
+31 C NG
+32 F NG
+33 C G
+34 H G
+35 D NG
+36 H G
+37 D G
+38 J G
+39 C G
+40 J G
+*************************

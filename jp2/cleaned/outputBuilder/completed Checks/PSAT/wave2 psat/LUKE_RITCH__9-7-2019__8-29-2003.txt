@@ -1,0 +1,191 @@
+LUKE
+RITCH
+8-29-2003
+9-7-2019
+21
+445578
+P02
+1 N
+2 Y
+3 N
+4 N
+5 N
+6 N
+7 N
+8 N
+9 N
+10 N
+11 DNE
+12 DNE
+13 D
+14 A
+15 A
+16 C
+17 A
+18 A
+19 C
+20 A
+21 B
+22 C
+23 A
+24 B
+1.1 Y
+1.2 0
+1.3 0
+1.4 0
+2.1 Y
+2.2 0
+2.3 0
+2.4 0
+3.1 N
+3.2 0
+3.3 3
+3.4 5
+4.1 N
+4.2 0
+4.3 2
+4.4 8
+************************
+1 A NG
+2 A NG
+3 B NG
+4 B NG
+5 A NG
+6 B NG
+7 D NG
+8 A NG
+9 D NG
+10 A NG
+11 D NG
+12 D NG
+13 B NG
+14 D NG
+15 A NG
+16 A NG
+17 D NG
+18 B NG
+19 B NG
+20 C NG
+21 B NG
+22 A NG
+23 A NG
+24 D NG
+25 C NG
+26 B NG
+27 B NG
+28 A NG
+29 A NG
+30 C NG
+31 B NG
+32 C NG
+33 D NG
+34 A NG
+35 A NG
+36 B NG
+37 D NG
+38 C NG
+39 C NG
+40 B NG
+41 B NG
+42 A NG
+43 D NG
+44 A NG
+45 A NG
+46 D NG
+47 D NG
+*************************
+1 D NG
+2 A NG
+3 C NG
+4 C NG
+5 B NG
+6 B NG
+7 A NG
+8 C NG
+9 B NG
+10 B NG
+11 D NG
+12 C NG
+13 C NG
+14 C G
+15 C G
+16 D NG
+17 A NG
+18 A NG
+19 D NG
+20 C NG
+21 A NG
+22 A NG
+23 D NG
+24 D NG
+25 C NG
+26 A NG
+27 B NG
+28 C NG
+29 C NG
+30 B NG
+31 D NG
+32 B NG
+33 B NG
+34 B NG
+35 D NG
+36 B NG
+37 C NG
+38 A NG
+39 C NG
+40 B NG
+41 B NG
+42 D NG
+43 C NG
+44 A NG
+*************************
+1 D NG
+2 A NG
+3 B G
+4 C NG
+5 C NG
+6 B NG
+7 A NG
+8 D NG
+9 C NG
+10 B NG
+11 A NG
+12 C G
+13 B G
+14 2 NG
+15 Z G
+16 Z G
+17 Z G
+*************************
+1 B NG
+2 A NG
+3 B NG
+4 Z G
+5 B NG
+6 A NG
+7 B NG
+8 C NG
+9 A NG
+10 D NG
+11 C NG
+12 B NG
+13 A NG
+14 B NG
+15 C NG
+16 B NG
+17 C NG
+18 D NG
+19 C NG
+20 B NG
+21 C NG
+22 Z G
+23 D NG
+24 Z G
+25 B NG
+26 A NG
+27 D NG
+28 70 NG
+29 5 NG
+30 Z G
+31 Z G
+*************************

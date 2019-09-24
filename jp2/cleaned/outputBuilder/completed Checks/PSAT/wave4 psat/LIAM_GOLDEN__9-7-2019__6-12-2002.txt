@@ -1,0 +1,191 @@
+Liam
+Golden
+6-12-2002
+9-7-2019
+21
+445578
+P02
+1 N
+2 N
+3 N
+4 N
+5 N
+6 Y
+7 N
+8 N
+9 N
+10 N
+11 N
+12 A
+13 B
+14 A
+15 B
+16 B
+17 A
+18 A
+19 B
+20 B
+21 B
+22 B
+23 A
+24 A
+1.1 Y
+1.2 3
+1.3 0
+1.4 0
+2.1 Y
+2.2 5
+2.3 0
+2.4 0
+3.1 N
+3.2 0
+3.3 3
+3.4 5
+4.1 N
+4.2 0
+4.3 3
+4.4 8
+************************
+1 D G
+2 C G
+3 C NG
+4 B NG
+5 C NG
+6 B NG
+7 D NG
+8 A NG
+9 D NG
+10 D NG
+11 D NG
+12 D NG
+13 D NG
+14 A NG
+15 A NG
+16 B G
+17 D NG
+18 B NG
+19 A NG
+20 C NG
+21 B NG
+22 D NG
+23 B NG
+24 D NG
+25 C NG
+26 D NG
+27 B NG
+28 A NG
+29 D NG
+30 B G
+31 D NG
+32 A NG
+33 C NG
+34 A NG
+35 A NG
+36 B NG
+37 A NG
+38 C NG
+39 C NG
+40 B G
+41 B NG
+42 B NG
+43 C G
+44 A NG
+45 A NG
+46 D NG
+47 C NG
+*************************
+1 D NG
+2 B NG
+3 C NG
+4 C NG
+5 B NG
+6 B G
+7 C NG
+8 B NG
+9 A NG
+10 A NG
+11 D NG
+12 B NG
+13 C NG
+14 C NG
+15 B NG
+16 B NG
+17 B NG
+18 A NG
+19 B NG
+20 A NG
+21 A NG
+22 A NG
+23 C NG
+24 D NG
+25 C NG
+26 A NG
+27 A NG
+28 C NG
+29 D NG
+30 A G
+31 D NG
+32 B NG
+33 D NG
+34 B NG
+35 D NG
+36 B G
+37 C NG
+38 A NG
+39 C G
+40 A NG
+41 B NG
+42 C NG
+43 C NG
+44 D NG
+*************************
+1 D NG
+2 A NG
+3 B G
+4 A NG
+5 B NG
+6 D NG
+7 C NG
+8 C G
+9 C NG
+10 A G
+11 B G
+12 A G
+13 C NG
+14 2 NG
+15 90 NG
+16 Z NG
+17 2176 G
+*************************
+1 C NG
+2 C NG
+3 B NG
+4 C NG
+5 B NG
+6 B NG
+7 B NG
+8 C NG
+9 A NG
+10 B G
+11 D NG
+12 C NG
+13 B NG
+14 C NG
+15 B G
+16 A G
+17 A NG
+18 C NG
+19 C NG
+20 D G
+21 B G
+22 B G
+23 D G
+24 C NG
+25 D NG
+26 A G
+27 A NG
+28 7.75 NG
+29 2 NG
+30 1368 NG
+31 85 NG
+*************************

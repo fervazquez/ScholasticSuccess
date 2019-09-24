@@ -1,0 +1,267 @@
+Morgan
+Dannels
+6-26-2003
+9-14-2019
+21
+445578
+A06
+1 N
+2 N
+3 Y
+4 N
+5 N
+6 Y
+7 N
+8 Y
+9 N
+10 N
+11 N
+12 A
+13 D
+14 A
+15 A
+16 C
+17 A
+18 A
+19 C
+20 C
+21 A
+22 C
+23 C
+24 A
+1.1 Y
+1.2 3
+1.3 0
+1.4 0
+2.1 N
+2.2 0
+2.3 14
+2.4 8
+3.1 Y
+3.2 3
+3.3 0
+3.4 0
+4.1 N
+4.2 0
+4.3 2
+4.4 1
+************************
+1 D NG
+2 H NG
+3 A NG
+4 F NG
+5 C NG
+6 J NG
+7 B NG
+8 G NG
+9 A NG
+10 J NG
+11 A NG
+12 F NG
+13 B G
+14 F NG
+15 B NG
+16 H NG
+17 A NG
+18 F NG
+19 B G
+20 G NG
+21 A NG
+22 G NG
+23 B NG
+24 F NG
+25 B NG
+26 J NG
+27 D NG
+28 H NG
+29 A NG
+30 H NG
+31 D NG
+32 J NG
+33 B NG
+34 H NG
+35 B NG
+36 J NG
+37 C NG
+38 H NG
+39 A G
+40 H NG
+41 C NG
+42 F NG
+43 D NG
+44 G NG
+45 B NG
+46 F NG
+47 B NG
+48 J NG
+49 D NG
+50 H NG
+51 A NG
+52 J NG
+53 C NG
+54 G NG
+55 D G
+56 H NG
+57 A NG
+58 G NG
+59 C NG
+60 G G
+61 B NG
+62 H NG
+63 B NG
+64 F NG
+65 B NG
+66 F NG
+67 A NG
+68 J G
+69 D NG
+70 J NG
+71 C NG
+72 G NG
+73 D NG
+74 J NG
+75 A NG
+*************************
+1 C NG
+2 K NG
+3 C NG
+4 J NG
+5 E NG
+6 G NG
+7 E NG
+8 H NG
+9 D G
+10 K NG
+11 C NG
+12 F NG
+13 B NG
+14 K G
+15 E NG
+16 J NG
+17 B NG
+18 J NG
+19 D NG
+20 F NG
+21 A NG
+22 G NG
+23 C NG
+24 F NG
+25 B NG
+26 J NG
+27 A NG
+28 G NG
+29 D NG
+30 J G
+31 A G
+32 F NG
+33 C G
+34 K NG
+35 B NG
+36 F NG
+37 B NG
+38 G NG
+39 B NG
+40 G NG
+41 C NG
+42 G G
+43 E G
+44 H NG
+45 D NG
+46 G G
+47 A G
+48 H G
+49 B G
+50 K NG
+51 E NG
+52 H G
+53 A G
+54 G G
+55 D G
+56 G G
+57 B G
+58 J G
+59 C G
+60 G G
+*************************
+1 B NG
+2 F NG
+3 B NG
+4 H NG
+5 D NG
+6 H NG
+7 C NG
+8 H NG
+9 A NG
+10 G NG
+11 A NG
+12 H G
+13 B NG
+14 F NG
+15 D NG
+16 G NG
+17 B NG
+18 G NG
+19 A NG
+20 J G
+21 D NG
+22 J G
+23 A NG
+24 H NG
+25 A NG
+26 H NG
+27 C G
+28 F NG
+29 C G
+30 G NG
+31 B NG
+32 J NG
+33 D NG
+34 G NG
+35 D G
+36 F NG
+37 B NG
+38 H NG
+39 A G
+40 H NG
+*************************
+1 B NG
+2 H NG
+3 D NG
+4 G NG
+5 A NG
+6 J G
+7 A NG
+8 G NG
+9 D NG
+10 H NG
+11 D NG
+12 G G
+13 C NG
+14 H NG
+15 B NG
+16 J G
+17 D NG
+18 J NG
+19 A NG
+20 F NG
+21 C NG
+22 F NG
+23 B G
+24 J G
+25 D NG
+26 F NG
+27 B NG
+28 F NG
+29 B NG
+30 F NG
+31 C NG
+32 F NG
+33 C NG
+34 H G
+35 D NG
+36 H NG
+37 C NG
+38 G G
+39 C NG
+40 G NG
+*************************

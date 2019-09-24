@@ -1,0 +1,191 @@
+William
+Terry
+12-28-2003
+9-7-2019
+22
+445578
+P02
+1 N
+2 N
+3 N
+4 N
+5 N
+6 N
+7 N
+8 N
+9 N
+10 N
+11 N
+12 A
+13 C
+14 B
+15 A
+16 B
+17 B
+18 A
+19 B
+20 B
+21 A
+22 D
+23 C
+24 A
+1.1 N
+1.2 0
+1.3 1
+1.4 1
+2.1 Y
+2.2 2
+2.3 0
+2.4 0
+3.1 N
+3.2 0
+3.3 1
+3.4 3
+4.1 N
+4.2 0
+4.3 4
+4.4 5
+************************
+1 B NG
+2 B NG
+3 B NG
+4 B NG
+5 A NG
+6 A G
+7 A NG
+8 A NG
+9 D NG
+10 A NG
+11 D NG
+12 D NG
+13 B NG
+14 A NG
+15 C NG
+16 B NG
+17 D NG
+18 B NG
+19 A NG
+20 C NG
+21 C NG
+22 D NG
+23 B NG
+24 D NG
+25 C NG
+26 B NG
+27 B NG
+28 A NG
+29 A NG
+30 A NG
+31 D NG
+32 D NG
+33 C NG
+34 A G
+35 A NG
+36 C NG
+37 D NG
+38 C NG
+39 B NG
+40 B G
+41 B NG
+42 B NG
+43 D NG
+44 A NG
+45 A NG
+46 D NG
+47 C G
+*************************
+1 D NG
+2 B NG
+3 C NG
+4 C NG
+5 B NG
+6 B G
+7 A NG
+8 B NG
+9 A NG
+10 D NG
+11 D NG
+12 C G
+13 C NG
+14 C NG
+15 D NG
+16 A NG
+17 B NG
+18 A NG
+19 B NG
+20 C NG
+21 A NG
+22 A NG
+23 C NG
+24 D NG
+25 C NG
+26 A NG
+27 A NG
+28 C NG
+29 A NG
+30 A NG
+31 D NG
+32 B NG
+33 D NG
+34 D G
+35 A NG
+36 B NG
+37 C NG
+38 A NG
+39 A NG
+40 D G
+41 B NG
+42 C NG
+43 C NG
+44 B NG
+*************************
+1 D G
+2 A NG
+3 B NG
+4 C NG
+5 C NG
+6 B NG
+7 A NG
+8 B NG
+9 C NG
+10 D NG
+11 C G
+12 B G
+13 B G
+14 2 NG
+15 132 NG
+16 4 G
+17 24 G
+*************************
+1 B NG
+2 A NG
+3 B NG
+4 D NG
+5 B NG
+6 A G
+7 B NG
+8 C NG
+9 A NG
+10 D NG
+11 B NG
+12 D NG
+13 B NG
+14 C NG
+15 B G
+16 B NG
+17 D G
+18 C NG
+19 C NG
+20 D NG
+21 B NG
+22 A G
+23 D NG
+24 C NG
+25 B NG
+26 B NG
+27 D NG
+28 Z NG
+29 3 G
+30 7 G
+31 7 G
+*************************

@@ -52,12 +52,13 @@ def tmake():
         #THIS IS FOR ACT
 
         pic=picfixmass(1,gray)
-
+        testList.append(pic)
         y+=1
         if y==7:
             print("YOYOYOYOYOYYOYOYOOYYOYOYOYOYOYOOYYOYOYOYO")
             for g in range(len(testList)):
-                cv2.imwrite("{}_{}.jpg".format(tcount,g),testList[g])
+                print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+                cv2.imwrite("1{}_{}.jpg".format(tcount,g),testList[g])
                 # testList[x].save("{}{}_{}.jpg".format(tpath,tcount,testList[g]),"JPEG")
             tcount+=1
             y=0

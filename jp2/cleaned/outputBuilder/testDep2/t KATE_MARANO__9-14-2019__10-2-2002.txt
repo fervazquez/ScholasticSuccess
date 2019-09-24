@@ -1,0 +1,297 @@
+KATE
+MARANO
+10-2-2002
+9-14-2019
+21
+445578
+A06
+1 N
+2 N
+3 DNE
+4 N
+5 N
+6 N
+7 N
+8 Y
+9 N
+10 N
+11 N
+12 A
+13 D
+14 A
+15 A
+16 C
+17 A
+18 B
+19 C
+20 A
+21 A
+22 D
+23 A
+24 A
+1.1 N
+1.2 0
+1.3 13
+1.4 7
+2.1 N
+2.2 0
+2.3 11
+2.4 9
+3.1 N
+3.2 0
+3.3 6
+3.4 4
+4.1 N
+4.2 0
+4.3 4
+4.4 2
+
+
+
+B
+G
+A
+F
+C
+J
+C
+G
+A?
+J
+A
+G?
+D
+F
+B?
+G?
+D?
+F
+C
+H?
+A
+G
+C
+F
+B
+H
+D
+J
+A
+H
+C
+F?
+B
+H
+B
+J
+C
+J
+A
+G
+D
+F?
+C
+G?
+B
+F
+C
+F
+B
+F?
+A
+J?
+C
+J
+C
+F?
+A
+J
+A
+H?
+C
+G
+B
+H
+B
+F
+B
+F?
+D
+H
+C
+G
+A
+F
+A?
+
+
+
+
+
+
+
+
+
+
+
+
+C
+K
+C
+J
+E
+G
+E
+H
+C?
+G
+C
+F
+B
+H?
+E?
+J
+B
+F?
+D
+F
+A
+G
+B
+F
+A
+J
+C
+H?
+D
+K?
+E
+F
+D?
+J
+B
+F
+A?
+G
+D?
+G
+A?
+H?
+B
+H?
+D
+F
+E?
+J
+E?
+G?
+E
+H?
+E?
+G?
+D?
+H?
+A?
+J?
+B?
+H?
+B
+J
+B
+H
+D
+G
+A
+H
+A
+F
+A
+H
+C?
+F
+A
+J
+B
+G
+A
+J
+B
+F
+A
+H
+A
+G
+D
+H
+A
+J
+A
+F
+C
+G
+D
+G
+A
+H
+B
+J
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B
+H
+D
+G
+A?
+F?
+A
+G
+D
+H
+D
+G
+A
+H
+B
+H
+D
+J
+A?
+G
+C
+F
+C
+G
+D
+G
+A
+F
+B
+H?
+C
+F
+B?
+H
+B
+J
+A?
+H?
+B?
+J?

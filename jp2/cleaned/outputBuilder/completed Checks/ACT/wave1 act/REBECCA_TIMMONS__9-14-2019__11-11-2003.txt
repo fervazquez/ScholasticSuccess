@@ -1,0 +1,267 @@
+Rebecca
+Timmons
+11-11-2003
+9-14-2019
+22
+445578
+A06
+1 N
+2 Y
+3 N
+4 N
+5 N
+6 Y
+7 N
+8 N
+9 N
+10 N
+11 N
+12 A
+13 C
+14 B
+15 A
+16 B
+17 B
+18 A
+19 B
+20 B
+21 A
+22 D
+23 C
+24 A
+1.1 Y
+1.2 2
+1.3 0
+1.4 0
+2.1 Y
+2.2 3
+2.3 0
+2.4 0
+3.1 N
+3.2 0
+3.3 5
+3.4 3
+4.1 N
+4.2 0
+4.3 1
+4.4 2
+************************
+1 B NG
+2 G G
+3 A NG
+4 F NG
+5 C NG
+6 H G
+7 B NG
+8 G NG
+9 A NG
+10 J NG
+11 A NG
+12 F G
+13 D NG
+14 F NG
+15 B G
+16 G G
+17 D NG
+18 F NG
+19 C NG
+20 G NG
+21 A NG
+22 G NG
+23 C G
+24 F NG
+25 B NG
+26 H G
+27 D NG
+28 J G
+29 A NG
+30 H NG
+31 C NG
+32 J G
+33 B NG
+34 H NG
+35 B NG
+36 J G
+37 C NG
+38 J NG
+39 A NG
+40 G NG
+41 D NG
+42 H G
+43 D G
+44 G NG
+45 B G
+46 F NG
+47 C NG
+48 J NG
+49 D NG
+50 H NG
+51 D G
+52 J NG
+53 C NG
+54 G G
+55 C G
+56 F NG
+57 A G
+58 J NG
+59 A G
+60 J G
+61 C NG
+62 J NG
+63 B G
+64 H G
+65 B NG
+66 F NG
+67 A G
+68 F G
+69 D NG
+70 H NG
+71 C NG
+72 G NG
+73 A NG
+74 F G
+75 D NG
+*************************
+1 C NG
+2 K NG
+3 C NG
+4 J NG
+5 E NG
+6 G NG
+7 E NG
+8 H NG
+9 C NG
+10 K NG
+11 C NG
+12 F NG
+13 B G
+14 H NG
+15 E G
+16 J NG
+17 B NG
+18 G NG
+19 D NG
+20 F NG
+21 A NG
+22 K G
+23 B NG
+24 F NG
+25 B NG
+26 H G
+27 A NG
+28 G G
+29 D G
+30 K G
+31 E G
+32 F NG
+33 D G
+34 K G
+35 B NG
+36 F NG
+37 E G
+38 G G
+39 C NG
+40 G NG
+41 B G
+42 J G
+43 D G
+44 H NG
+45 E NG
+46 F G
+47 E G
+48 F NG
+49 D NG
+50 J G
+51 C G
+52 K G
+53 C G
+54 K G
+55 B G
+56 K G
+57 D G
+58 F G
+59 C G
+60 G G
+*************************
+1 B NG
+2 J NG
+3 B NG
+4 H NG
+5 D NG
+6 H G
+7 A NG
+8 H NG
+9 A NG
+10 G NG
+11 A NG
+12 H NG
+13 B NG
+14 F NG
+15 D G
+16 H NG
+17 B NG
+18 G G
+19 A NG
+20 J NG
+21 A NG
+22 J NG
+23 A NG
+24 H NG
+25 C G
+26 J G
+27 C NG
+28 F NG
+29 A G
+30 G G
+31 D G
+32 J NG
+33 D G
+34 G NG
+35 A G
+36 H NG
+37 C NG
+38 J NG
+39 C NG
+40 G NG
+*************************
+1 B NG
+2 H NG
+3 D NG
+4 G NG
+5 D G
+6 F G
+7 A NG
+8 G NG
+9 D NG
+10 H NG
+11 D NG
+12 G G
+13 C G
+14 H NG
+15 B NG
+16 J NG
+17 D G
+18 H G
+19 A G
+20 J G
+21 C NG
+22 F G
+23 B G
+24 G G
+25 B NG
+26 G NG
+27 D G
+28 F NG
+29 B NG
+30 F NG
+31 C NG
+32 F G
+33 D G
+34 H G
+35 B NG
+36 F NG
+37 A G
+38 J G
+39 C NG
+40 H G
+*************************
