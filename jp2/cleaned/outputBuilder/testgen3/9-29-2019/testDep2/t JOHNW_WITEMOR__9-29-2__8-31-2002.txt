@@ -1,0 +1,297 @@
+JOHNW
+WITEMOR
+8-31-2002
+9-29-2
+21
+5578
+A06
+1 N
+2 N
+3 N
+4 N
+5 N
+6 Y
+7 N
+8 N
+9 Y
+10 N
+11 N
+12 -1
+13 D
+14 A
+15 A
+16 C
+17 A
+18 A
+19 C
+20 A
+21 B
+22 C
+23 A
+24 A
+1.1 Y
+1.2 3
+1.3 0
+1.4 0
+2.1 Y
+2.2 11
+2.3 0
+2.4 0
+3.1 N
+3.2 4
+3.3 3
+3.4 3
+4.1 Y
+4.2 15
+4.3 0
+4.4 0
+
+
+
+B
+F
+D
+F
+D
+J
+B
+G
+A
+J
+A
+G
+D
+H
+B
+F
+A
+F
+C
+J
+A
+G
+D
+J
+B
+H
+D
+J
+A
+H
+A
+F
+B
+J
+B
+J
+A
+J
+B
+G
+D
+G
+B
+G
+B
+F
+C
+H
+D
+H
+A
+H
+C
+G
+A
+H
+A
+G
+C
+F?
+B
+J
+A
+H?
+B
+J
+C
+F
+D
+J?
+C
+G
+D
+J
+A
+
+
+
+
+
+
+
+
+
+
+
+
+C?
+K
+C
+J
+E
+G
+E
+H
+C
+J
+C
+F
+B
+J?
+E
+J
+B
+J
+D
+F?
+B?
+G
+D
+F
+A
+K
+A
+H?
+D?
+F?
+D?
+F
+D?
+J
+B
+F?
+B?
+J?
+B?
+G
+C
+G?
+C?
+G
+A
+F
+C?
+G
+E?
+H
+E
+H
+A?
+H?
+B
+H
+B
+F
+C
+H
+B
+J?
+B
+H
+D
+H
+C
+H
+A
+F
+A
+H
+A
+G
+D
+H
+B
+J
+A
+J
+B
+H
+C
+G
+C
+H
+C
+H
+A
+G
+C
+J
+D
+F
+A
+G
+B
+J
+C
+G
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B?
+H
+D?
+G
+C?
+G?
+A
+G
+C?
+H?
+D?
+G
+A
+G?
+B
+H
+C?
+J?
+A
+G?
+A?
+F
+B?
+G
+A?
+F?
+B?
+F
+B?
+J
+C?
+G?
+C?
+F?
+D?
+G?
+C?
+F?
+C?
+F?

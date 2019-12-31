@@ -1,0 +1,297 @@
+CLARKQ
+BRON
+5-8-2002
+9-29-2019
+21
+1755
+A06
+1 N
+2 N
+3 N
+4 Y
+5 Y
+6 N
+7 N
+8 N
+9 Y
+10 N
+11 N
+12 A
+13 C
+14 B
+15 A
+16 B
+17 C
+18 A
+19 C
+20 A
+21 A
+22 C
+23 A
+24 A
+1.1 N
+1.2 0
+1.3 10
+1.4 7
+2.1 N
+2.2 0
+2.3 2
+2.4 3
+3.1 Y
+3.2 1
+3.3 0
+3.4 0
+4.1 N
+4.2 0
+4.3 2
+4.4 2
+
+
+
+B
+G
+A
+F
+C
+J
+B
+G
+A
+J
+A
+G
+D
+F
+B
+G
+A
+F
+C
+G
+A?
+G
+C
+F
+B
+J
+D
+J
+A
+H
+C
+J
+B
+H
+B
+J
+D
+J
+D
+H
+C
+H
+D?
+G
+B
+F
+C
+J
+D
+G
+A?
+H
+C
+G
+A
+J?
+A
+J
+A
+J
+D
+J
+B
+F
+B
+F
+C
+F?
+D
+H
+C
+G
+A
+F
+D
+
+
+
+
+
+
+
+
+
+
+
+
+C
+K
+C
+J
+E
+G
+E
+H
+C
+K
+C
+F
+B
+H
+E
+J
+B
+G
+D
+F
+A
+H
+B
+F
+B
+J?
+A
+G
+A?
+K?
+C?
+F
+D
+K
+B
+F
+B?
+G?
+E
+G
+A?
+J?
+D?
+H
+E
+G?
+A?
+H
+C?
+J?
+D?
+K
+E
+H?
+B?
+K?
+B?
+J?
+E?
+J?
+B
+J
+B
+H
+D
+F?
+A
+H
+A
+F
+A
+H
+B
+G
+D
+H
+B
+G
+A
+J
+B
+F
+A
+H
+C
+H?
+C?
+F
+C
+G
+D
+J
+D
+G
+A
+F
+B
+J
+A?
+G
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B
+H
+D
+G
+C?
+F
+A
+G
+D
+J
+C
+G
+D
+H
+B
+J
+D
+H?
+A
+J
+C
+F
+B
+G
+D
+G
+D?
+F?
+B
+F
+B?
+F
+C
+G?
+B
+J?
+C?
+F?
+D?
+H?

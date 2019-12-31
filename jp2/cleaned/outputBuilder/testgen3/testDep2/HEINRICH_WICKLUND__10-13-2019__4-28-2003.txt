@@ -1,0 +1,206 @@
+HEINRICH
+WICKLUND
+4-28-2003
+10-13-2019
+21
+-1
+S02
+1 N
+2 N
+3 N
+4 N
+5 N
+6 N
+7 N
+8 N
+9 N
+10 N
+11 N
+12 A
+13 C
+14 B
+15 C
+16 C
+17 A
+18 A
+19 C
+20 B
+21 B
+22 C
+23 A
+24 A
+1.1 N
+1.2 0
+1.3 10
+1.4 13
+2.1 Y
+2.2 3
+2.3 0
+2.4 0
+3.1 N
+3.2 0
+3.3 4
+3.4 5
+4.1 Y
+4.2 10
+4.3 0
+4.4 0
+************************
+1 A NG
+2 C NG
+3 C NG
+4 C NG
+5 D NG
+6 A NG
+7 D NG
+8 A NG
+9 D NG
+10 C NG
+11 A G
+12 D NG
+13 A NG
+14 B NG
+15 C NG
+16 A NG
+17 C NG
+18 A NG
+19 A NG
+20 B NG
+21 C G
+22 C NG
+23 A NG
+24 B NG
+25 C NG
+26 B NG
+27 D NG
+28 A G
+29 D NG
+30 A G
+31 B G
+32 A NG
+33 B NG
+34 A NG
+35 D NG
+36 B NG
+37 B NG
+38 D NG
+39 C NG
+40 A NG
+41 B NG
+42 C NG
+43 C NG
+44 B NG
+45 D NG
+46 C NG
+47 A NG
+48 D G
+49 B NG
+50 D NG
+51 B G
+52 B NG
+*************************
+1 B NG
+2 B NG
+3 A NG
+4 A NG
+5 D NG
+6 D NG
+7 C NG
+8 D NG
+9 D NG
+10 B NG
+11 C NG
+12 B NG
+13 B NG
+14 C NG
+15 C G
+16 C G
+17 D G
+18 B NG
+19 A NG
+20 A NG
+21 D NG
+22 A NG
+23 A NG
+24 B NG
+25 B NG
+26 D NG
+27 D NG
+28 A NG
+29 A NG
+30 B NG
+31 D NG
+32 A NG
+33 C NG
+34 B NG
+35 C NG
+36 D NG
+37 C NG
+38 B NG
+39 A NG
+40 D NG
+41 C NG
+42 D G
+43 C NG
+44 D NG
+*************************
+1 C NG
+2 B NG
+3 A NG
+4 A NG
+5 C NG
+6 B NG
+7 C G
+8 C NG
+9 B NG
+10 C NG
+11 C NG
+12 A NG
+13 D G
+14 A NG
+15 D NG
+16 2 NG
+17 19 NG
+18 12 NG
+19 2 G
+20 0.25 NG
+*************************
+1 C NG
+2 B NG
+3 A NG
+4 C NG
+5 C NG
+6 B NG
+7 D NG
+8 D NG
+9 A NG
+10 B NG
+11 B NG
+12 C NG
+13 D NG
+14 C NG
+15 A NG
+16 D NG
+17 C NG
+18 B NG
+19 C NG
+20 C NG
+21 D NG
+22 C NG
+23 B NG
+24 D NG
+25 B NG
+26 D NG
+27 D NG
+28 B NG
+29 D NG
+30 C NG
+31 14 NG
+32 7 NG
+33 7 NG
+34 105 NG
+35 15 NG
+36 16 NG
+37 3150 NG
+38 7500 NG
+*************************

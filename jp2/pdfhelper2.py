@@ -13,19 +13,41 @@ import sys, cv2, imutils, os
 # inputpdf=PdfFileReader(open("{}.pdf".format("07-01-2019"), "rb"))
 # inputpdf=PdfFileReader(open("{}.pdf".format("07-08-2019"), "rb"))
 # inputpdf=PdfFileReader(open("{}.pdf".format("07-16-2019"), "rb"))
-inputpdf=PdfFileReader(open("{}.pdf".format("07-27-2019"), "rb"))
+inputpdf=PdfFileReader(open("{}.pdf".format("12022019"), "rb"))
 print(inputpdf.numPages)
 output=PdfFileWriter()
 
-output.addPage(inputpdf.getPage(4))
-output.addPage(inputpdf.getPage(5))
-output.addPage(inputpdf.getPage(6))
-output.addPage(inputpdf.getPage(7))
+
+
 output.addPage(inputpdf.getPage(0))
 output.addPage(inputpdf.getPage(1))
 output.addPage(inputpdf.getPage(2))
 output.addPage(inputpdf.getPage(3))
+output.addPage(inputpdf.getPage(4))
+output.addPage(inputpdf.getPage(5))
+output.addPage(inputpdf.getPage(6))
+output.addPage(inputpdf.getPage(7))
 
+
+output2=PdfFileWriter()
+output2.addPage(inputpdf.getPage(8))
+output2.addPage(inputpdf.getPage(9))
+output2.addPage(inputpdf.getPage(10))
+output2.addPage(inputpdf.getPage(11))
+output2.addPage(inputpdf.getPage(12))
+output2.addPage(inputpdf.getPage(13))
+output2.addPage(inputpdf.getPage(14))
+output2.addPage(inputpdf.getPage(15))
+
+output3=PdfFileWriter()
+output3.addPage(inputpdf.getPage(16))
+output3.addPage(inputpdf.getPage(17))
+output3.addPage(inputpdf.getPage(18))
+output3.addPage(inputpdf.getPage(19))
+output3.addPage(inputpdf.getPage(20))
+output3.addPage(inputpdf.getPage(21))
+output3.addPage(inputpdf.getPage(22))
+output3.addPage(inputpdf.getPage(23))
 
 # output.addPage(inputpdf.getPage(9))
 # output.addPage(inputpdf.getPage(10))
@@ -86,8 +108,12 @@ output.addPage(inputpdf.getPage(3))
 # """
         
 
-with open("./hold/07272019.pdf","wb") as outstream:
+with open("./1.pdf","wb") as outstream:
     output.write(outstream)
     #i=i+7
     #print(i)
-    
+with open("./2.pdf","wb") as outstream:
+    output2.write(outstream)
+
+with open("./3.pdf","wb") as outstream:
+    output3.write(outstream)
