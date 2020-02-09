@@ -12,25 +12,20 @@ def getPg(output,indoc,start,amt):
     return output
 
 
-x1=PdfFileReader(open("fixAvery.pdf","rb"))
-x2=PdfFileReader(open("fixlauren.pdf","rb"))
-x3=PdfFileReader(open("fixmariska.pdf","rb"))
-x4=PdfFileReader(open("fixnicholas.pdf","rb"))
+x1=PdfFileReader(open("1-20-2019.pdf","rb"))
 
 
 actMega = PdfFileWriter()
+actMega2 = PdfFileWriter()
 
-for x in range(x1.numPages):
+for x in range(0,8):
     actMega.addPage(x1.getPage(x))
 
-for x in range(x2.numPages):
-    actMega.addPage(x2.getPage(x))
+for x in range(8,32):
+    actMega2.addPage(x1.getPage(x))
 
-for x in range(x3.numPages):
-    actMega.addPage(x3.getPage(x))
-
-for x in range(x4.numPages):
-    actMega.addPage(x4.getPage(x))
-
-with open("actTOT.pdf","wb") as outstream:
+with open("1-20-2020SAT.pdf","wb") as outstream:
     actMega.write(outstream)
+
+with open("1-20-2020ACT.pdf","wb") as outstream:
+    actMega2.write(outstream)

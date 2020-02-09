@@ -461,7 +461,6 @@ def surveyPage2(doc):
     #cv2.imshow("gray2", gray2)
     # cv2.waitKey(0)
 
-
     (h,w)=gray2.shape[:2]
     fBlock=gray2[int(h*.045):int(h*.22),int(w*.155):int(w*.35)]
     secBlock=gray2[int(h*.295):int(h*.47),int(w*.155):int(w*.28)]
@@ -475,8 +474,6 @@ def surveyPage2(doc):
     # cv2.imshow("fourthBlock", fourthBlock)
     # cv2.imshow("thirdBlock", thirdBlock)
     # cv2.waitKey(0)
-
-
 
     #D0B, grad yr, date, HS code. Use gray1
     (h,w)=gray1.shape[:2]
@@ -520,24 +517,18 @@ def surveyPage2(doc):
     # cv2.imshow("schoolCode",schoolCode)
     # cv2.imshow("testCode",testCode)
 
-    
     bmon=ttResponse(monDOB)
     bday=ttResponse(dayDOB)
     
     byear=fTResponse(yrDOB)
     gyr=ttResponse(gradyr)
 
-    # dday=ttResponse(dayDate)
-    # dmon=ttResponse(monDate)
-    # dyear=fTResponse(yrDate)
-    # scCode=fTResponse(schoolCode)
-    # tcCode=threeResp(testCode)
-    dday=14
-    dmon=9
-    dyear=2019
-    scCode="445578"
-    tcCode="A06"
-
+    dday=ttResponse(dayDate)
+    dmon=ttResponse(monDate)
+    dyear=fTResponse(yrDate)
+    scCode=fTResponse(schoolCode)
+    tcCode=threeResp(testCode)
+    
     # print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
     # print("Birthday Month:{}".format(bmon))
     # print("Birthday Day:{}".format(bday))
@@ -564,7 +555,6 @@ def surveyPage2(doc):
     'Survey Questions List':qList}
 
 def surveyPage3(doc):
-    
     (h,w)=doc.shape[:2]
     gray = doc[int(h*0.1):h-int(h*0.023),0:w]
     # cv2.imshow("surveyPage3",gray)
@@ -653,7 +643,6 @@ def twoRep(pic):
         return "DNE"
     
 def ttResponse(pic):
-    #cv2.imshow("whole",pic)
     pic = cv2.threshold(pic, 0, 255,cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
     # cv2.imshow("output here",pic)
     # cv2.waitKey(0)
@@ -695,8 +684,6 @@ def ttResponse(pic):
     #cv2.waitKey(0)
 
 def threeResp(pic):
-    print("big yo")
-    #cv2.imshow("whole",pic)
     pic = cv2.threshold(pic, 0, 255,cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
     # cv2.imshow("output here",pic)
     # cv2.waitKey(0)
@@ -755,8 +742,6 @@ def threeResp(pic):
         return helper
 
 def fTResponse(pic):
-    print("yo")
-    #cv2.imshow("whole",pic)
     pic = cv2.threshold(pic, 0, 255,cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
     # cv2.imshow("output here",pic)
     # cv2.waitKey(0)
