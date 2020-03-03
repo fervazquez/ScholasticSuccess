@@ -9,7 +9,7 @@ psat = [[47,0],[44,1],[17,2],[31,3]]
 act= [[40,2],[75,0],[60,1],[40,3]]
 test= []
 def sqlDate(day):
-    order = day.split("-")
+    order = day.replace("/","-").split("-")
     day = order[2]+"-"+order[0]+"-"+order[1]
     return day
 #This function take a file and uploads the student data to the database

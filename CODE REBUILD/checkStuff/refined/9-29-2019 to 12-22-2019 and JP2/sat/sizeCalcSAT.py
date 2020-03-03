@@ -14,14 +14,14 @@ def readDep():
     tcount=0
     xList=[[]]
     for x in depList:
-        if count==9:
+        if count==10:
             count=0
             tcount+=1
             xList.append([])
         xList[tcount].append("./dep_folder/"+x)
         count+=1
         
-    pdfList=parseinput("psatTOT.pdf")
+    pdfList=parseinput("sat_cr.pdf")
     #print(pdfList)
     print(len(pdfList))
 
@@ -82,7 +82,7 @@ def readDep():
 
             sizeDict[countDict].append(sizePercentage)
             countDict+=1
-            if countDict==9:
+            if countDict==10:
                 countDict=0
 
         # print("**********************")
@@ -124,7 +124,7 @@ def parseinput(nameIn):
     Tcount=0
     tlist=[[]]
     for x in pglist:
-        if count==7:
+        if count==8:
             count=0
             Tcount+=1
             tlist.append([])
