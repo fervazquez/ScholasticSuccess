@@ -60,14 +60,14 @@ calcSIZEZSAT={0: [0.37, 0.382],
 # 8: [0.6361794117647059, 0.6398764705882353]
 
 calcSIZEZPSAT={0: [0.355, 0.375],
-1: [0.36, 0.375],
-2: [0.115, 0.132],
-3: [0.265, 0.283],
-4: [0.195, 0.23],
-5: [0.27, 0.28],
-6: [0.63, 0.641],
-7: [0.63, 0.641],
-8: [0.63, 0.641]}
+ 1: [0.36, 0.375],
+ 2: [0.115, 0.132],
+ 3: [0.265, 0.283],
+ 4: [0.195, 0.23],
+ 5: [0.27, 0.28],
+ 6: [0.63, 0.641],
+ 7: [0.63, 0.641],
+ 8: [0.63, 0.641]}
 
 def tmain(txtFile,pdfUsed):
     tList=readTXT(txtFile)
@@ -103,7 +103,7 @@ def parsePDF(txtFile,pdfList):
     
                     else:
                         ACT[y][z].append("F")
-                        errorList.append(["ACT",actcount,z])
+                        errorList.append(["ACT",actcount,z,ACT[y][z][1],ACT[y][z][0]])
                     cv2.imwrite("./dep_folder/ACT/{}_{}.jpg".format(actcount,z),ACT[y][z][0])
                 # currently here for code, making the jsons
                 ACT[y]=ACTJSONMaker(ACT[y],actcount)
@@ -126,7 +126,7 @@ def parsePDF(txtFile,pdfList):
                         
                     else:
                         SAT[y][z].append("F")
-                        errorList.append(["SAT",satcount,z])
+                        errorList.append(["SAT",satcount,z,SAT[y][z][1],SAT[y][z][0]])
                     cv2.imwrite("./dep_folder/SAT/{}_{}.jpg".format(satcount,z),SAT[y][z][0])
                 SAT[y]=SATJSONMaker(SAT[y],satcount)
                 satcount+=1
@@ -146,11 +146,18 @@ def parsePDF(txtFile,pdfList):
                         
                     else:
                         PSAT[y][z].append("F")
-                        errorList.append(["PSAT",psatcount,z,PSAT[y][z][1]])
+                        errorList.append(["PSAT",psatcount,z,PSAT[y][z][1],PSAT[y][z][0]])
                     cv2.imwrite("./dep_folder/PSAT/{}_{}.jpg".format(psatcount,z),PSAT[y][z][0])
                 PSAT[y]=PSATJSONMaker(PSAT[y],psatcount)
                 psatcount+=1
-                    
+    outputData={}
+    outputData['PSAT']=PSAT
+    outputData['SAT']=SAT
+    outputData['ACT']=ACT
+    with open('dep_folder/testJSONS/DATATests.txt', 'w') as outfile:
+        json.dump(outputData, outfile)
+
+    errorDirCreation(errorList)
     # print("PSAT LEN",len(PSAT))
     # print("SAT LEN",len(SAT[0]))
     # print("ACT LEN",len(ACT[0]))
@@ -158,17 +165,151 @@ def parsePDF(txtFile,pdfList):
     print(errorList)
     print(len(errorList))
 
+def errorDirCreation(eList):
+    fileobj = open("./dep_folder/Errors/errorFix.txt","w+")
+
+    for x in range(len(eList)):
+        tl=eList[x]
+        cv2.imwrite("./dep_folder/Errors/{}_{}_{}.jpg".format(tl[0],tl[1],tl[2]),tl[4])
+        fileobj.write("Error for documennt {}_{}_{}.jpg\n".format(tl[0],tl[1],tl[2]))
+        if tl[0]=="PSAT":
+            if tl[2]==0:
+                outNums(fileobj,1,48)
+            if tl[2]==1:
+                outNums(fileobj,1,44)
+            if tl[2]==2:
+                outNums(fileobj,1,14)
+            if tl[2]==3:
+                outNums(fileobj,14,18)
+            if tl[2]==4:
+                outNums(fileobj,1,28)
+            if tl[2]==5:
+                outNums(fileobj,28,32)
+            if tl[2]==6:
+                namePage(fileobj)
+            if tl[2]==7:
+                bioPage(fileobj)
+            if tl[2]==8:
+                timingPage(fileobj)
+
+            # x.append(transform_info(SS_PSAT(tlist[0][0],48,tlist[0][2])))
+            # x.append(transform_info(SS_PSAT(tlist[1][0],44,tlist[1][2])))
+            # x.append(transform_info(SS_PSAT31(tlist[2][0],14,tlist[2][2])))
+            # x.append(transform_info(SS_PSATFR(tlist[3][0],14,4,tlist[3][2])))
+
+            # x.append(transform_info(SS_PSAT41(tlist[4][0],28,tlist[4][2])))
+            # x.append(transform_info(SS_PSATFR(tlist[5][0],28,4,tlist[5][2])))
+
+        elif tl[0]=="SAT":
+
+            if tl[2]==0:
+                outNums(fileobj,1,53)
+            if tl[2]==1:
+                outNums(fileobj,1,45)
+            if tl[2]==2:
+                outNums(fileobj,1,16)
+            if tl[2]==3:
+                outNums(fileobj,16,21)
+            if tl[2]==4:
+                outNums(fileobj,1,31)
+            if tl[2]==5:
+                outNums(fileobj,31,36)
+            if tl[2]==6:
+                outNums(fileobj,36,39)
+            if tl[2]==7:
+                namePage(fileobj)
+            if tl[2]==8:
+                bioPage(fileobj)
+            if tl[2]==9:
+                timingPage(fileobj)
+
+            # x.append(transform_info(SS_PSAT(tlist[0][0],53,tlist[0][2])))
+            # x.append(transform_info(SS_PSAT(tlist[1][0],45,tlist[1][2])))
+            # x.append(transform_info(SS_PSAT31(tlist[2][0],16,tlist[2][2])))
+            # x.append(transform_info(SS_PSATFR(tlist[3][0],16,5,tlist[3][2])))
+            # x.append(transform_info(SS_PSAT(tlist[4][0],31,tlist[4][2])))
+            
+            # x.append(transform_info(SS_PSATFR(tlist[6][0],31,5,tlist[6][2])))
+            # x.append(transform_info(SS_PSATFR(tlist[5][0],36,3,tlist[5][2])))
+
+        else:   #this is for ACT
+
+            if tl[2]==0:
+                outNums(fileobj,1,76)
+            if tl[2]==1:
+                outNums(fileobj,1,61)
+            if tl[2]==2:
+                outNums(fileobj,1,41)
+            if tl[2]==3:
+                outNums(fileobj,1,41)
+            if tl[2]==4:
+                namePage(fileobj)
+            if tl[2]==5:
+                bioPage(fileobj)
+            if tl[2]==6:
+                timingPage(fileobj)
+
+            # x.append(transform_info(SS_ACT(tlist[0][0],76,tlist[0][2])))
+            # x.append(transform_info(SS_ACTMath(tlist[1][0],61,tlist[1][2])))
+            # x.append(transform_info(SS_ACT(tlist[2][0],41,tlist[2][2])))
+            # x.append(transform_info(SS_ACT(tlist[3][0],41,tlist[3][2])))
+        fileobj.write("*********************************************************\n")
+
+def outNums(fobj,start,end):
+    for x in range(start,end):
+        fobj.write("{} Z NG\n".format(x))
+
+def namePage(fobj):
+    fobj.write('First_Name\n')
+    fobj.write('Last_Name\n')
+    for x in range(1,13):
+        fobj.write("{} Z\n".format(x))
+
+def bioPage(fobj):
+
+    fobj.write("DOB // \n")
+    fobj.write("TestDate //\n")
+    fobj.write("Grad_yr \n")
+    fobj.write("School_Code \n")
+    fobj.write("Test_Code \n")
+    for x in range(13,25):
+        fobj.write("{} Z\n".format(x))
+
+
+    # {'Birthday Month':'','Birthday Day':'','Birthday Year':'',
+    #         'Date Month':'','Date Day':'','Date Year':'',
+    #         'Grad Yr':'','School Code':'','Test Code':'',
+    #         'Survey Questions List':''}
+
+def timingPage(fobj):   
+    fobj.write("1.1 \n")
+    fobj.write("1.2 \n")
+    fobj.write("1.3 \n")
+    fobj.write("1.4 \n")
+    fobj.write("2.1 \n")
+    fobj.write("2.2 \n")
+    fobj.write("2.3 \n")
+    fobj.write("2.4 \n")
+    fobj.write("3.1 \n")
+    fobj.write("3.2 \n")
+    fobj.write("3.3 \n")
+    fobj.write("3.4 \n")
+    fobj.write("4.1 \n")
+    fobj.write("4.2 \n")
+    fobj.write("4.3 \n")
+    fobj.write("4.4 \n")
+
 def ACTJSONMaker(tlist, tc):
     x=[]
     outputDict={}
     x.append(transform_info(SS_ACT(tlist[0][0],76,tlist[0][2])))
     x.append(transform_info(SS_ACTMath(tlist[1][0],61,tlist[1][2])))
     x.append(transform_info(SS_ACT(tlist[2][0],41,tlist[2][2])))
-    x.append(transform_info(SS_ACT(tlist[3][0],41,tlist[3][0],)))
+    x.append(transform_info(SS_ACT(tlist[3][0],41,tlist[3][2])))
     x.append(surveyPage3(tlist[4][0],tlist[4][2]))
     x.append(surveyPage2(tlist[5][0],tlist[5][2]))
     x.append(surveyPage1(tlist[6][0],tlist[6][2]))
-
+    outputDict['tc']=tc
     outputDict['first_Name'] = x[4]['First Name']
     outputDict['last_Name'] = x[4]['Last Name']
     outputDict['DOB'] = str(x[5]['Birthday Month'])+'/'+str(x[5]['Birthday Day'])+'/'+str(x[5]['Birthday Year'])
@@ -191,7 +332,6 @@ def ACTJSONMaker(tlist, tc):
 
     return outputDict
 
-
 def SATJSONMaker(tlist, tc):
     x=[]
     outputDict={}
@@ -203,13 +343,13 @@ def SATJSONMaker(tlist, tc):
 
 
     
-    x.append(transform_info(SS_PSATFR(tlist[6][0],31,5,tlist[5][2])))
-    x.append(transform_info(SS_PSATFR(tlist[5][0],36,3,tlist[6][2])))
+    x.append(transform_info(SS_PSATFR(tlist[6][0],31,5,tlist[6][2])))
+    x.append(transform_info(SS_PSATFR(tlist[5][0],36,3,tlist[5][2])))
 
     x.append(surveyPage3(tlist[7][0],tlist[7][2]))
     x.append(surveyPage2(tlist[8][0],tlist[8][2]))
     x.append(surveyPage1(tlist[9][0],tlist[9][2]))
-
+    outputDict['tc']=tc
     outputDict['first_Name'] = x[7]['First Name']
     outputDict['last_Name'] = x[7]['Last Name']
     outputDict['DOB'] = str(x[8]['Birthday Month'])+'/'+str(x[8]['Birthday Day'])+'/'+str(x[8]['Birthday Year'])
@@ -239,8 +379,8 @@ def SATJSONMaker(tlist, tc):
 def PSATJSONMaker(tlist, tc):
     x=[]
     outputDict={}
-    x.append(transform_info(SS_PSAT(tlist[0][0],53,tlist[0][2])))
-    x.append(transform_info(SS_PSAT(tlist[1][0],45,tlist[1][2])))
+    x.append(transform_info(SS_PSAT(tlist[0][0],48,tlist[0][2])))
+    x.append(transform_info(SS_PSAT(tlist[1][0],44,tlist[1][2])))
     x.append(transform_info(SS_PSAT31(tlist[2][0],14,tlist[2][2])))
     x.append(transform_info(SS_PSATFR(tlist[3][0],14,4,tlist[3][2])))
     x.append(transform_info(SS_PSAT41(tlist[4][0],28,tlist[4][2])))
@@ -249,7 +389,7 @@ def PSATJSONMaker(tlist, tc):
     x.append(surveyPage3(tlist[6][0],tlist[6][2]))
     x.append(surveyPage2(tlist[7][0],tlist[7][2]))
     x.append(surveyPage1(tlist[8][0],tlist[8][2]))
-
+    outputDict['tc']=tc
     outputDict['first_Name'] = x[6]['First Name']
     outputDict['last_Name'] = x[6]['Last Name']
     outputDict['DOB'] = str(x[7]['Birthday Month'])+'/'+str(x[7]['Birthday Day'])+'/'+str(x[7]['Birthday Year'])
@@ -1073,7 +1213,11 @@ def surveyPage2(doc, val):
     dmon=ttResponse(monDate)
     dyear=fTResponse(yrDate)
     scCode=fTResponse(schoolCode)
-    tcCode=threeResp(testCode)
+
+    try:
+        tcCode=threeResp(testCode)
+    except:
+        tcCode=-1
     
     # print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
     # print("Birthday Month:{}".format(bmon))
@@ -1282,7 +1426,6 @@ def threeResp(pic):
 
     if (val1==-1) and (val2==-1):
         return -1
-    
     if (val1!=-1) and (val2==-1):
         return int(val1)
     if (val1==-1) and (val2!=-1):
@@ -1952,5 +2095,8 @@ def parseinput(nameIn):
     print("****************************************************")
     return pglist
 
+ft = time.time()
 tmain(sys.argv[1],sys.argv[2])
+et = time.time()
+print(et-ft)
 # readTXT(sys.argv[1])
